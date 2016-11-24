@@ -88,7 +88,7 @@
 
         <!-- Main Footer -->
         <footer class="main-footer" style="max-height: 100px;text-align: center">
-            <strong>Copyright © 2016 <a href="#">Laboratório de Estudos em Análise do Comportamento</a>.</strong> Todos os direitos reservados.
+            <strong>Copyright © 2016 <a href="#">Laboratório de Estudos em Análise do Comportamento - LEAC</a>.</strong> Todos os direitos reservados.
         </footer>
 
     </div>
