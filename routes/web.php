@@ -23,3 +23,5 @@ Route::get('/home', 'HomeController@index');
 Route::resource('instrucaoInicials', 'InstrucaoInicialController');
 
 Route::resource('mensagems', 'MensagemController');
+
+Route::resource('perguntas', 'PerguntaController');

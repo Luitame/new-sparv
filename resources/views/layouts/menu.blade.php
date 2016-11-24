@@ -13,3 +13,10 @@
         <span> Mensagens</span>
     </a>
 </li>
+
+<li class="{{ Request::is('perguntas*') ? 'active' : '' }}">
+    <a href="{!! route('perguntas.index') !!}">
+        <i class="icon ion-university"></i>
+        <span> Perguntas</span>
+    </a>
+</li>
