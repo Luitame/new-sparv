@@ -29,3 +29,5 @@ Route::resource('perguntas', 'PerguntaController');
 Route::resource('cartas', 'CartaController');
 
 Route::resource('tempos', 'TempoController');
+
+Route::resource('visorPontuacaos', 'VisorPontuacaoController');

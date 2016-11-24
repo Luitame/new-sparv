@@ -27,3 +27,5 @@ Route::resource('perguntas', 'PerguntaAPIController');
 Route::resource('cartas', 'CartaAPIController');
 
 Route::resource('tempos', 'TempoAPIController');
+
+Route::resource('visor_pontuacaos', 'VisorPontuacaoAPIController');
