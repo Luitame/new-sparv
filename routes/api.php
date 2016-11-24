@@ -25,3 +25,5 @@ Route::resource('mensagems', 'MensagemAPIController');
 Route::resource('perguntas', 'PerguntaAPIController');
 
 Route::resource('cartas', 'CartaAPIController');
+
+Route::resource('tempos', 'TempoAPIController');
