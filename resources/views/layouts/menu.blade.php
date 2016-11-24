@@ -20,3 +20,24 @@
         <span> Perguntas</span>
     </a>
 </li>
+
+<li class="{{ Request::is('tempos*') ? 'active' : '' }}">
+    <a href="{!! route('tempos.index') !!}">
+        <i class="fa fa-clock-o"></i>
+        <span> Tempo</span>
+    </a>
+</li>
+
+<li class="{{ Request::is('visorPontuacaos*') ? 'active' : '' }}">
+    <a href="{!! route('visorPontuacaos.index') !!}">
+        <i class="fa fa-braille"></i>
+        <span> Visor de Pontuação</span>
+    </a>
+</li>
+
+<li class="{{ Request::is('cartas*') ? 'active' : '' }}">
+    <a href="{!! route('cartas.index') !!}">
+        <i class="fa fa-address-book"></i>
+        <span> Cartas</span>
+    </a>
+</li>
