@@ -19,3 +19,5 @@ Route::get('/user', function (Request $request) {
 
 
 Route::resource('instrucao_inicials', 'InstrucaoInicialAPIController');
+
+Route::resource('mensagems', 'MensagemAPIController');

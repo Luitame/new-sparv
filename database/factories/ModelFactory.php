@@ -27,3 +27,9 @@ $factory->define(App\Models\InstrucaoInicial::class, function (Faker\Generator $
         'instrucaoTxt' => $faker->text($maxNbChars = 255),
     ];
 });
+
+$factory->define(App\Models\Mensagem::class, function (Faker\Generator $faker) {
+    return [
+        'mensagemTxt' => $faker->text($maxNbChars = 255),
+    ];
+});
