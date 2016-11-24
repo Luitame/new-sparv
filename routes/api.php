@@ -23,3 +23,5 @@ Route::resource('instrucao_inicials', 'InstrucaoInicialAPIController');
 Route::resource('mensagems', 'MensagemAPIController');
 
 Route::resource('perguntas', 'PerguntaAPIController');
+
+Route::resource('cartas', 'CartaAPIController');

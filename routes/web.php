@@ -25,3 +25,5 @@ Route::resource('instrucaoInicials', 'InstrucaoInicialController');
 Route::resource('mensagems', 'MensagemController');
 
 Route::resource('perguntas', 'PerguntaController');
+
+Route::resource('cartas', 'CartaController');
