@@ -9,7 +9,7 @@
 
 <li class="{{ Request::is('mensagems*') ? 'active' : '' }}">
     <a href="{!! route('mensagems.index') !!}">
-        <i class="fa fa-comments"></i>
+        <i class="fa fa-envelope"></i>
         <span> Mensagens</span>
     </a>
 </li>
