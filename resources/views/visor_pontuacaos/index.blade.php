@@ -2,7 +2,7 @@
 
 @section('content')
     <section class="content-header">
-        <h1 class="pull-left">Visor Pontuacaos</h1>
+        <h1 class="pull-left">Visor de Pontuação</h1>
         <h1 class="pull-right">
            <a class="btn btn-primary pull-right" style="margin-top: -10px;margin-bottom: 5px" href="{!! route('visorPontuacaos.create') !!}">Adicionar novo</a>
         </h1>

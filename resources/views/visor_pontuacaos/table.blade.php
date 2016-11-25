@@ -1,12 +1,13 @@
 <table class="table table-responsive table-hover" id="visorPontuacaos-table">
     <thead>
-        <th>Visibilidadeinicial</th>
-        <th>Mudandoem</th>
+        <th>Visibilidade Inicial</th>
+        <th>Mudando Em</th>
         <th colspan="3">Ação</th>
     </thead>
     <tbody>
     @foreach($visorPontuacaos as $visorPontuacao)
         <tr>
+            <td>{!! $visorPontuacao->id !!}</td>
             <td>{!! $visorPontuacao->visibilidadeInicial !!}</td>
             <td>{!! $visorPontuacao->mudandoEm !!}</td>
             <td>

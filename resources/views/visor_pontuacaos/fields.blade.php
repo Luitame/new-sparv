@@ -1,13 +1,13 @@
 <div class="row">
     <!-- Visibilidadeinicial Field -->
 <div class="form-group col-sm-6">
-    {!! Form::label('visibilidadeInicial', 'Visibilidadeinicial:') !!}
+    {!! Form::label('visibilidadeInicial', 'Visibilidade Inicial:') !!}
     {!! Form::text('visibilidadeInicial', null, ['class' => 'form-control']) !!}
 </div>
 
 <!-- Mudandoem Field -->
 <div class="form-group col-sm-6">
-    {!! Form::label('mudandoEm', 'Mudandoem:') !!}
+    {!! Form::label('mudandoEm', 'Mudando Em:') !!}
     {!! Form::text('mudandoEm', null, ['class' => 'form-control']) !!}
 </div>
 </div>
