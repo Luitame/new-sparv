@@ -1,32 +1,40 @@
+<!-- Inicio Field -->
 <div class="row">
-    <!-- Inicio Field -->
-    <div class="form-group col-sm-6">
+    <div class="form-group col-sm-1">
         {!! Form::label('inicio', 'Início:') !!}
         {!! Form::text('inicio', null, ['class' => 'form-control']) !!}
     </div>
+</div>
 
-    <!-- Fim Field -->
-    <div class="form-group col-sm-6">
+<!-- Fim Field -->
+<div class="row">
+    <div class="form-group col-sm-1">
         {!! Form::label('fim', 'Fim:') !!}
         {!! Form::text('fim', null, ['class' => 'form-control']) !!}
     </div>
+</div>
 
-    <!-- Ordem Field -->
-    <div class="form-group col-sm-6">
+<!-- Ordem Field -->
+<div class="row">
+    <div class="form-group col-sm-2">
         {!! Form::label('ordem', 'Ordem:') !!}
-        {!! Form::select('ordem', [], null, ['class' => 'form-control']) !!}
+        {!! Form::select('ordem', ['crescente' => 'Crescente', 'decrescente' => 'Decrescente'], null, ['class' => 'form-control']) !!}
     </div>
+</div>
 
-    <!-- Mudandoem Field -->
-    <div class="form-group col-sm-6">
-        {!! Form::label('mudandoEm', 'Mudando em:') !!}
+<!-- Mudandoem Field -->
+<div class="row">
+    <div class="form-group col-sm-1">
+        {!! Form::label('mudandoEm', 'Muda em:') !!}
         {!! Form::text('mudandoEm', null, ['class' => 'form-control']) !!}
     </div>
+</div>
 
-    <!-- Visibilidadeinicial Field -->
-    <div class="form-group col-sm-6">
+<!-- Visibilidadeinicial Field -->
+<div class="row">
+    <div class="form-group col-sm-2">
         {!! Form::label('visibilidadeInicial', 'Visibilidade Inicial:') !!}
-        {!! Form::select('visibilidadeInicial', [], null, ['class' => 'form-control']) !!}
+        {!! Form::select('visibilidadeInicial', ['visivel' => 'Visível', 'invisivel' => 'Invisível'], null, ['class' => 'form-control']) !!}
     </div>
 </div>
 
