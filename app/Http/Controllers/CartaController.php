@@ -8,6 +8,7 @@ use App\Repositories\CartaRepository;
 use App\Http\Controllers\AppBaseController;
 use Illuminate\Http\Request;
 use Flash;
+use Illuminate\Support\Facades\Storage;
 use Prettus\Repository\Criteria\RequestCriteria;
 use Response;
 
@@ -32,8 +33,7 @@ class CartaController extends AppBaseController
         $this->cartaRepository->pushCriteria(new RequestCriteria($request));
         $cartas = $this->cartaRepository->paginate(10);
 
-        return view('cartas.index')
-            ->with('cartas', $cartas);
+        return view('cartas.index')->with('cartas', $cartas);
     }
 
     /**
@@ -107,7 +107,7 @@ class CartaController extends AppBaseController
     /**
      * Update the specified Carta in storage.
      *
-     * @param  int              $id
+     * @param  int $id
      * @param UpdateCartaRequest $request
      *
      * @return Response
