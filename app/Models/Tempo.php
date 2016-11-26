@@ -13,8 +13,6 @@ class Tempo extends Model
 {
 
     public $table = 'tempos';
-    
-
 
     public $fillable = [
         'total',
@@ -42,10 +40,9 @@ class Tempo extends Model
      */
     public static $rules = [
         'total' => 'required|min:8|max:8|date_format:H:i:s',
-        'ordem' => 'required',
-        'mudandoEm' => 'required',
-        'visibilidadeInicial' => 'required'
+        'ordem' => 'required|min:9|max:11',
+        'mudandoEm' => 'required|min:8|max:8|date_format:H:i:s',
+        'visibilidadeInicial' => 'required|min:7|max:9'
     ];
-
     
 }
