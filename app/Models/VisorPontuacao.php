@@ -39,7 +39,7 @@ class VisorPontuacao extends Model
         'mudandoEm' => 'required|min:8|max:8|date_format:H:i:s'
     ];
 
-    public function getOrdemAttribute($value)
+    public function getVisibilidadeInicialAttribute($value)
     {
         return ucfirst($value);
     }
