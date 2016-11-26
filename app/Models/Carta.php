@@ -13,14 +13,12 @@ class Carta extends Model
 {
 
     public $table = 'cartas';
-    
-
 
     public $fillable = [
         'nome',
+        'numero',
         'cor',
-        'simbolo',
-        'verso'
+        'simbolo'
     ];
 
     /**
@@ -30,9 +28,9 @@ class Carta extends Model
      */
     protected $casts = [
         'nome' => 'string',
+        'numero' => 'integer',
         'cor' => 'string',
-        'simbolo' => 'string',
-        'verso' => 'boolean'
+        'simbolo' => 'string'
     ];
 
     /**
@@ -42,10 +40,9 @@ class Carta extends Model
      */
     public static $rules = [
         'nome' => 'required',
+        'numero' => 'required|number|integer',
         'cor' => 'required',
         'simbolo' => 'required',
-        'verso' => 'required'
     ];
 
-    
 }
