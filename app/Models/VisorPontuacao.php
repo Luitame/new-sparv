@@ -13,8 +13,6 @@ class VisorPontuacao extends Model
 {
 
     public $table = 'visor_pontuacaos';
-    
-
 
     public $fillable = [
         'visibilidadeInicial',
@@ -41,5 +39,9 @@ class VisorPontuacao extends Model
         'mudandoEm' => 'required|min:8|max:8|date_format:H:i:s'
     ];
 
+    public function getOrdemAttribute($value)
+    {
+        return ucfirst($value);
+    }
     
 }
