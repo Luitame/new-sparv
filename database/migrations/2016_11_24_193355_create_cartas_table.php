@@ -16,9 +16,9 @@ class CreateCartasTable extends Migration
         Schema::create('cartas', function (Blueprint $table) {
             $table->increments('id');
             $table->string('nome', 30);
+            $table->unsignedTinyInteger('numero');
             $table->string('cor', 30);
             $table->string('simbolo', 30);
-            $table->boolean('verso');
             $table->timestamps();
         });
     }
