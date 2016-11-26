@@ -30,7 +30,7 @@ class TempoController extends AppBaseController
     public function index(Request $request)
     {
         $this->tempoRepository->pushCriteria(new RequestCriteria($request));
-        $tempos = $this->tempoRepository->all();
+        $tempos = $this->tempoRepository->paginate(12);
 
         return view('tempos.index')
             ->with('tempos', $tempos);

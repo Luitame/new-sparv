@@ -16,6 +16,10 @@
         <div class="box box-primary">
             <div class="box-body">
                     @include('tempos.table')
+                <hr>
+                    <div class="pull-right">
+                        {!! $tempos->render() !!}
+                    </div>
             </div>
         </div>
     </div>
