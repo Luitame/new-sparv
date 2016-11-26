@@ -2,7 +2,7 @@
 <div class="row">
     <div class="form-group col-sm-1">
         {!! Form::label('inicio', 'Início:') !!}
-        {!! Form::text('inicio', null, ['class' => 'form-control inicioTempo']) !!}
+        {!! Form::text('inicio', null, ['class' => 'form-control tempo', 'style' => 'padding:5px;']) !!}
     </div>
 </div>
 
@@ -10,7 +10,7 @@
 <div class="row">
     <div class="form-group col-sm-1">
         {!! Form::label('fim', 'Fim:') !!}
-        {!! Form::text('fim', null, ['class' => 'form-control']) !!}
+        {!! Form::text('fim', null, ['class' => 'form-control tempo', 'style' => 'padding:5px;']) !!}
     </div>
 </div>
 
@@ -26,7 +26,7 @@
 <div class="row">
     <div class="form-group col-sm-1">
         {!! Form::label('mudandoEm', 'Muda em:') !!}
-        {!! Form::text('mudandoEm', null, ['class' => 'form-control']) !!}
+        {!! Form::text('mudandoEm', null, ['class' => 'form-control tempo', 'style' => 'padding:5px;']) !!}
     </div>
 </div>
 
