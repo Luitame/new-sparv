@@ -17,7 +17,7 @@ class CreateTemposTable extends Migration
             $table->increments('id');
             $table->string('total', 8);
             $table->string('ordem', 30);
-            $table->string('mudandoEm', 8);
+            $table->string('mudandoEm', 8)->nullable();
             $table->string('visibilidadeInicial', 30);
             $table->timestamps();
         });
