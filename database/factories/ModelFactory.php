@@ -39,3 +39,12 @@ $factory->define(App\Models\Pergunta::class, function (Faker\Generator $faker) {
         'perguntaTxt' => $faker->text($maxNbChars = 255),
     ];
 });
+
+$factory->define(App\Models\Tempo::class, function (Faker\Generator $faker) {
+    return [
+        'total' => '00:'.$faker->numberBetween($min=01, $max=59).':'.$faker->numberBetween($min=00, $max=59),
+        'ordem' => $faker->randomElement(['crescente', 'decrescente']),
+        'mudandoEm' => '00:00:00',
+        'visibilidadeInicial' => $faker->randomElement(['visível', 'invisível'])
+    ];
+});
