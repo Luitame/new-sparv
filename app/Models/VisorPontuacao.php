@@ -37,8 +37,8 @@ class VisorPontuacao extends Model
      * @var array
      */
     public static $rules = [
-        'visibilidadeInicial' => 'required',
-        'mudandoEm' => 'required'
+        'visibilidadeInicial' => 'required|min:7|max:9',
+        'mudandoEm' => 'required|min:8|max:8|date_format:H:i:s'
     ];
 
     
