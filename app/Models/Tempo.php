@@ -44,5 +44,15 @@ class Tempo extends Model
         'mudandoEm' => 'required|min:8|max:8|date_format:H:i:s',
         'visibilidadeInicial' => 'required|min:7|max:9'
     ];
-    
+
+    public function getOrdemAttribute($value)
+    {
+        return ucfirst($value);
+    }
+
+    public function getVisibilidadeInicialAttribute($value)
+    {
+        return ucfirst($value);
+    }
+
 }
