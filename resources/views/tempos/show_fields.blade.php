@@ -2,7 +2,7 @@
 <div class="row">
     <div class="col-sm-12">
         <div class="form-group">
-            {!! Form::label('id', 'Id:') !!}
+            {!! Form::label('id', 'ID:') !!}
             <p>{!! $tempo->id !!}</p>
         </div>
     </div>
@@ -47,24 +47,3 @@
         </div>
     </div>
 </div>
-
-<!-- Created At Field -->
-<div class="row">
-    <div class="col-sm-12">
-        <div class="form-group">
-            {!! Form::label('created_at', 'Created At:') !!}
-            <p>{!! $tempo->created_at !!}</p>
-        </div>
-    </div>
-</div>
-
-<!-- Updated At Field -->
-<div class="row">
-    <div class="col-sm-12">
-        <div class="form-group">
-            {!! Form::label('updated_at', 'Updated At:') !!}
-            <p>{!! $tempo->updated_at !!}</p>
-        </div>
-    </div>
-</div>
-
