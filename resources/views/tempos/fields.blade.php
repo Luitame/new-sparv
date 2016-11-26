@@ -2,7 +2,7 @@
 <div class="row">
     <div class="form-group col-sm-1">
         {!! Form::label('inicio', 'Início:') !!}
-        {!! Form::text('inicio', null, ['class' => 'form-control']) !!}
+        {!! Form::text('inicio', null, ['class' => 'form-control inicioTempo']) !!}
     </div>
 </div>
 
