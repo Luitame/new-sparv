@@ -1,5 +1,6 @@
 <table class="table table-responsive table-hover" id="visorPontuacaos-table">
     <thead>
+        <th>#</th>
         <th>Visibilidade Inicial</th>
         <th>Mudando Em</th>
         <th colspan="3">Ação</th>

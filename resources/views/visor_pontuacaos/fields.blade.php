@@ -1,15 +1,26 @@
+<!-- Visibilidadeinicial Field -->
+
 <div class="row">
-    <!-- Visibilidadeinicial Field -->
-<div class="form-group col-sm-6">
-    {!! Form::label('visibilidadeInicial', 'Visibilidade Inicial:') !!}
-    {!! Form::text('visibilidadeInicial', null, ['class' => 'form-control']) !!}
+    <div class="form-group col-sm-2">
+        {!! Form::label('visibilidadeInicial', 'Visibilidade Inicial:') !!}
+    </div>
+</div>
+<div class="row">
+    <div class="form-group col-sm-2">
+        {!! Form::select('visibilidadeInicial', ['visivel' => 'Visível', 'invisivel' => 'Invisível'], null, ['class' => 'form-control']) !!}
+    </div>
 </div>
 
 <!-- Mudandoem Field -->
-<div class="form-group col-sm-6">
-    {!! Form::label('mudandoEm', 'Mudando Em:') !!}
-    {!! Form::text('mudandoEm', null, ['class' => 'form-control']) !!}
+<div class="row">
+    <div class="form-group col-sm-2">
+        {!! Form::label('mudandoEm', 'Mudando Em:') !!}
+    </div>
 </div>
+<div class="row">
+    <div class="form-group col-sm-1">
+        {!! Form::text('mudandoEm', null, ['class' => 'form-control tempo', 'style' => 'padding:5px;']) !!}
+    </div>
 </div>
 
 <!-- Submit Field -->

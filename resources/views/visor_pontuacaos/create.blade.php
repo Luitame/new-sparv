@@ -3,7 +3,7 @@
 @section('content')
     <section class="content-header">
         <h1>
-            Visor Pontuacao
+            Visor Pontuação
         </h1>
     </section>
     <div class="content">
@@ -24,3 +24,4 @@
         </div>
     </div>
 @endsection
+@include('vendor.mask.mask')
