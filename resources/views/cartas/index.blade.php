@@ -12,7 +12,11 @@
         <div class="clearfix"></div>
         <div class="box box-primary">
             <div class="box-body">
-                    @include('cartas.grid')
+                @include('cartas.grid')
+                <hr>
+                <div class="pull-right">
+                    {!! $cartas->render() !!}
+                </div>
             </div>
         </div>
     </div>
