@@ -48,3 +48,10 @@ $factory->define(App\Models\Tempo::class, function (Faker\Generator $faker) {
         'visibilidadeInicial' => $faker->randomElement(['visível', 'invisível'])
     ];
 });
+
+$factory->define(App\Models\VisorPontuacao::class, function (Faker\Generator $faker) {
+    return [
+        'visibilidadeInicial' => $faker->randomElement(['visível', 'invisível']),
+        'mudandoEm' => '00:0'.$faker->numberBetween($min=1, $max=9).':0'.$faker->numberBetween($min=0, $max=9)
+    ];
+});
