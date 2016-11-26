@@ -31,7 +31,7 @@ class CartaController extends AppBaseController
     public function index(Request $request)
     {
         $this->cartaRepository->pushCriteria(new RequestCriteria($request));
-        $cartas = $this->cartaRepository->paginate(10);
+        $cartas = $this->cartaRepository->paginate(18);
 
         return view('cartas.index')->with('cartas', $cartas);
     }
