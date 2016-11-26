@@ -16,9 +16,10 @@
         <div class="box box-primary">
             <div class="box-body">
                     @include('perguntas.table')
-            </div>
-            <div class="pull-right">
-                {!! $perguntas->render() !!}
+                <hr>
+                <div class="pull-right">
+                    {!! $perguntas->render() !!}
+                </div>
             </div>
         </div>
     </div>

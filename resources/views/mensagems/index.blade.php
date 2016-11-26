@@ -16,9 +16,10 @@
         <div class="box box-primary">
             <div class="box-body">
                     @include('mensagems.table')
-            </div>
-            <div class="pull-right">
-                {!! $mensagems->render() !!}
+                <hr>
+                <div class="pull-right">
+                    {!! $mensagems->render() !!}
+                </div>
             </div>
         </div>
     </div>

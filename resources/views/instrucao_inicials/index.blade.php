@@ -16,9 +16,10 @@
         <div class="box box-primary">
             <div class="box-body">
                     @include('instrucao_inicials.table')
-            </div>
-            <div class="pull-right">
-                {!! $instrucaoInicials->render() !!}}
+                <hr>
+                <div class="pull-right">
+                    {!! $instrucaoInicials->render() !!}}
+                </div>
             </div>
         </div>
     </div>
