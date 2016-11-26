@@ -12,6 +12,6 @@ class TempoSeeder extends Seeder
      */
     public function run()
     {
-        factory(Tempo::class, 6)->create();
+        factory(Tempo::class, 30)->create();
     }
 }

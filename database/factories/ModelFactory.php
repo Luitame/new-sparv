@@ -42,7 +42,7 @@ $factory->define(App\Models\Pergunta::class, function (Faker\Generator $faker) {
 
 $factory->define(App\Models\Tempo::class, function (Faker\Generator $faker) {
     return [
-        'total' => '00:'.$faker->numberBetween($min=01, $max=59).':'.$faker->numberBetween($min=00, $max=59),
+        'total' => '00:0'.$faker->numberBetween($min=1, $max=9).':0'.$faker->numberBetween($min=0, $max=9),
         'ordem' => $faker->randomElement(['crescente', 'decrescente']),
         'mudandoEm' => '00:00:00',
         'visibilidadeInicial' => $faker->randomElement(['visível', 'invisível'])
