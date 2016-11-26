@@ -1,8 +1,7 @@
 <table class="table table-responsive table-hover" id="tempos-table">
     <thead>
     <th>#</th>
-    <th>Inicio</th>
-    <th>Fim</th>
+    <th>Total</th>
     <th>Ordem</th>
     <th>Mudando Em</th>
     <th>Visibilidade Inicial</th>
@@ -12,8 +11,7 @@
     @foreach($tempos as $tempo)
         <tr>
             <td>{!! $tempo->id !!}</td>
-            <td>{!! $tempo->inicio !!}</td>
-            <td>{!! $tempo->fim !!}</td>
+            <td>{!! $tempo->total !!}</td>
             <td>{!! $tempo->ordem !!}</td>
             <td>{!! $tempo->mudandoEm !!}</td>
             <td>{!! $tempo->visibilidadeInicial !!}</td>

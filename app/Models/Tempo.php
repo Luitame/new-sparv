@@ -17,8 +17,7 @@ class Tempo extends Model
 
 
     public $fillable = [
-        'inicio',
-        'fim',
+        'total',
         'ordem',
         'mudandoEm',
         'visibilidadeInicial'
@@ -30,10 +29,9 @@ class Tempo extends Model
      * @var array
      */
     protected $casts = [
-        'inicio' => 'datetime',
-        'fim' => 'datetime',
+        'total' => 'string',
         'ordem' => 'string',
-        'mudandoEm' => 'datetime',
+        'mudandoEm' => 'string',
         'visibilidadeInicial' => 'string'
     ];
 
@@ -43,8 +41,7 @@ class Tempo extends Model
      * @var array
      */
     public static $rules = [
-        'inicio' => 'required',
-        'fim' => 'required',
+        'total' => 'required|min:8|max:8|date_format:H:i:s',
         'ordem' => 'required',
         'mudandoEm' => 'required',
         'visibilidadeInicial' => 'required'

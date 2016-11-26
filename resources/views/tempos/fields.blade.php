@@ -1,16 +1,8 @@
 <!-- Inicio Field -->
 <div class="row">
     <div class="form-group col-sm-1">
-        {!! Form::label('inicio', 'Início:') !!}
-        {!! Form::text('inicio', null, ['class' => 'form-control tempo', 'style' => 'padding:5px;']) !!}
-    </div>
-</div>
-
-<!-- Fim Field -->
-<div class="row">
-    <div class="form-group col-sm-1">
-        {!! Form::label('fim', 'Fim:') !!}
-        {!! Form::text('fim', null, ['class' => 'form-control tempo', 'style' => 'padding:5px;']) !!}
+        {!! Form::label('inicio', 'Total:') !!}
+        {!! Form::text('total', null, ['class' => 'form-control tempo', 'style' => 'padding:5px;']) !!}
     </div>
 </div>
 

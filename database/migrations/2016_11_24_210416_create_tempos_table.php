@@ -15,10 +15,9 @@ class CreateTemposTable extends Migration
     {
         Schema::create('tempos', function (Blueprint $table) {
             $table->increments('id');
-            $table->dateTime('inicio');
-            $table->dateTime('fim');
+            $table->string('total', 8);
             $table->string('ordem', 30);
-            $table->dateTime('mudandoEm');
+            $table->string('mudandoEm', 8);
             $table->string('visibilidadeInicial', 30);
             $table->timestamps();
         });

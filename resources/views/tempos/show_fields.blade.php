@@ -12,18 +12,8 @@
 <div class="row">
     <div class="col-sm-12">
         <div class="form-group">
-            {!! Form::label('inicio', 'Inicio:') !!}
-            <p>{!! $tempo->inicio !!}</p>
-        </div>
-    </div>
-</div>
-
-<!-- Fim Field -->
-<div class="row">
-    <div class="col-sm-12">
-        <div class="form-group">
-            {!! Form::label('fim', 'Fim:') !!}
-            <p>{!! $tempo->fim !!}</p>
+            {!! Form::label('inicio', 'Total:') !!}
+            <p>{!! $tempo->total !!}</p>
         </div>
     </div>
 </div>
