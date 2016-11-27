@@ -41,3 +41,10 @@
         <span> Cartas</span>
     </a>
 </li>
+
+<li class="{{ Request::is('fases*') ? 'active' : '' }}">
+    <a href="{!! route('fases.index') !!}">
+        <i class="fa fa-address-book"></i>
+        <span> Fases</span>
+    </a>
+</li>
