@@ -1,6 +1,6 @@
 <table class="table table-responsive table-hover" id="fases-table">
     <thead>
-        <th>Criterio</th>
+        <th>Critério</th>
         <th>Pontos</th>
         <th colspan="3">Ação</th>
     </thead>
