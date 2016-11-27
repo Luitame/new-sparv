@@ -31,3 +31,5 @@ Route::resource('cartas', 'CartaController');
 Route::resource('tempos', 'TempoController');
 
 Route::resource('visorPontuacaos', 'VisorPontuacaoController');
+
+Route::resource('fases', 'FaseController');
