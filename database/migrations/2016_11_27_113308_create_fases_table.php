@@ -15,6 +15,8 @@ class CreateFasesTable extends Migration
     {
         Schema::create('fases', function (Blueprint $table) {
             $table->increments('id');
+            $table->unsignedInteger('carta_id');
+            $table->foreign('carta_id')->references('id')->on('cartas');
             $table->string('criterio', 8);
             $table->unsignedSmallInteger('pontos');
             $table->timestamps();
