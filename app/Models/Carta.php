@@ -45,4 +45,9 @@ class Carta extends Model
         'simbolo' => 'required',
     ];
 
+    public function fases()
+    {
+        return $this->hasMany(Fase::class);
+    }
+
 }

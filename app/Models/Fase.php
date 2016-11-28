@@ -38,5 +38,20 @@ class Fase extends Model
         'criterio' => 'required|min:5|max:8',
         'pontos' => 'required|numeric|integer|between:0,13'
     ];
-    
+
+    public function carta()
+    {
+        return $this->belongsTo(Carta::class);
+    }
+
+    public function mensagems()
+    {
+        return $this;
+    }
+
+    public function perguntas()
+    {
+        return $this;
+    }
+
 }
