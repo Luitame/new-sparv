@@ -46,12 +46,16 @@ class Fase extends Model
 
     public function mensagems()
     {
-        return $this->belongsToMany(Mensagem::class, 'fases_mensagems');
+        return $this->belongsToMany(Mensagem::class, 'fases_mensagems')
+            ->withPivot('fase_id', 'mensagem_id', 'ordem', 'pontos')
+            ->withTimestamps();
     }
 
     public function perguntas()
     {
-        return $this->belongsToMany(Pergunta::class, 'fases_perguntas');
+        return $this->belongsToMany(Pergunta::class, 'fases_perguntas')
+            ->withPivot('fase_id', 'pergunta_id', 'ordem', 'pontos')
+            ->withTimestamps();
     }
 
 }

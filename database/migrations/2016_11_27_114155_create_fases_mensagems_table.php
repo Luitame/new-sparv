@@ -19,6 +19,7 @@ class CreateFasesMensagemsTable extends Migration
             $table->foreign('fase_id')->references('id')->on('fases');
             $table->unsignedInteger('mensagem_id');
             $table->foreign('mensagem_id')->references('id')->on('mensagems');
+            $table->string('ordem');
             $table->unsignedSmallInteger('pontos');
             $table->timestamps();
         });

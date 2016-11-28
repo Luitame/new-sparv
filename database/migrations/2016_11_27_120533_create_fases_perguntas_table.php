@@ -19,6 +19,7 @@ class CreateFasesPerguntasTable extends Migration
             $table->foreign('fase_id')->references('id')->on('fases');
             $table->unsignedInteger('pergunta_id');
             $table->foreign('pergunta_id')->references('id')->on('perguntas');
+            $table->string('ordem');
             $table->unsignedSmallInteger('pontos');
             $table->timestamps();
         });
