@@ -13,7 +13,6 @@ class Mensagem extends Model
 {
 
     public $table = 'mensagems';
-    
 
 
     public $fillable = [
@@ -38,5 +37,9 @@ class Mensagem extends Model
         'mensagemTxt' => 'required|max:255'
     ];
 
-    
+    public function fases()
+    {
+        return $this->belongsToMany(Fase::class, 'fases_mensagems');
+    }
+
 }
