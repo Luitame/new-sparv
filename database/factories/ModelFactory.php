@@ -55,3 +55,10 @@ $factory->define(App\Models\VisorPontuacao::class, function (Faker\Generator $fa
         'mudandoEm' => '00:0'.$faker->numberBetween($min=1, $max=9).':0'.$faker->numberBetween($min=0, $max=9)
     ];
 });
+
+$factory->define(App\Models\Fase::class, function (Faker\Generator $faker) {
+    return [
+        'criterio' => $faker->randomElement(['esquerdo', 'direito', 'ambos']),
+        'pontos' => $faker->numberBetween($min=0, $max=13),
+    ];
+});
