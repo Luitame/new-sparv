@@ -58,4 +58,9 @@ class Fase extends Model
             ->withTimestamps();
     }
 
+    public function getCriterioAttribute($value)
+    {
+        return ucfirst($value);
+    }
+
 }
