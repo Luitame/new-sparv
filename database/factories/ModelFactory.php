@@ -42,7 +42,7 @@ $factory->define(App\Models\Pergunta::class, function (Faker\Generator $faker) {
 
 $factory->define(App\Models\Tempo::class, function (Faker\Generator $faker) {
     return [
-        'total' => '00:0'.$faker->numberBetween($min=1, $max=9).':0'.$faker->numberBetween($min=0, $max=9),
+        'total' => '00:0' . $faker->numberBetween($min = 1, $max = 9) . ':0' . $faker->numberBetween($min = 0, $max = 9),
         'ordem' => $faker->randomElement(['crescente', 'decrescente']),
         'mudandoEm' => '00:00:00',
         'visibilidadeInicial' => $faker->randomElement(['visível', 'invisível'])
@@ -52,13 +52,14 @@ $factory->define(App\Models\Tempo::class, function (Faker\Generator $faker) {
 $factory->define(App\Models\VisorPontuacao::class, function (Faker\Generator $faker) {
     return [
         'visibilidadeInicial' => $faker->randomElement(['visível', 'invisível']),
-        'mudandoEm' => '00:0'.$faker->numberBetween($min=1, $max=9).':0'.$faker->numberBetween($min=0, $max=9)
+        'mudandoEm' => '00:0' . $faker->numberBetween($min = 1, $max = 9) . ':0' . $faker->numberBetween($min = 0, $max = 9)
     ];
 });
 
 $factory->define(App\Models\Fase::class, function (Faker\Generator $faker) {
     return [
+        'carta_id' => rand(1, 895),
         'criterio' => $faker->randomElement(['esquerdo', 'direito', 'ambos']),
-        'pontos' => $faker->numberBetween($min=0, $max=13),
+        'pontos' => $faker->numberBetween($min = 0, $max = 13),
     ];
 });
