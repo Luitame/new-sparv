@@ -1,5 +1,12 @@
+<style>
+    #fases-table td{
+        vertical-align: middle;
+    }
+</style>
 <table class="table table-responsive table-hover" id="fases-table">
     <thead>
+        <th width="5%">Carta</th>
+        <th width="1%">#</th>
         <th>Critério</th>
         <th>Pontos</th>
         <th colspan="3">Ação</th>
@@ -7,6 +14,8 @@
     <tbody>
     @foreach($fases as $fase)
         <tr>
+            <td><img src="{{url("images/cartas/".$fase->carta->nome.".png")}}" height="50px" alt="{{url("images/cartas/".$fase->carta->nome.".png")}}"></td>
+            <td>{!! $fase->id !!}</td>
             <td>{!! $fase->criterio !!}</td>
             <td>{!! $fase->pontos !!}</td>
             <td>
