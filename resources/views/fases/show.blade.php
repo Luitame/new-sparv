@@ -3,7 +3,7 @@
 @section('content')
     <section class="content-header">
         <h1>
-            Fase
+            Fase #{{$fase->id}}
         </h1>
     </section>
     <div class="content">
