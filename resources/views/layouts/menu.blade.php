@@ -44,7 +44,7 @@
 
 <li class="{{ Request::is('fases*') ? 'active' : '' }}">
     <a href="{!! route('fases.index') !!}">
-        <i class="fa fa-address-book"></i>
+        <i class="fa fa-cubes"></i>
         <span> Fases</span>
     </a>
 </li>
