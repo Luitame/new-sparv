@@ -38,5 +38,9 @@ class Pergunta extends Model
         'perguntaTxt' => 'required|max:255'
     ];
 
+    public function fases()
+    {
+        return $this->belongsToMany(Fase::class, 'fases_perguntas');
+    }
     
 }
