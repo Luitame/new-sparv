@@ -75,6 +75,8 @@ $factory->define(App\Models\RegraExtra::class, function (Faker\Generator $faker)
 
 $factory->define(App\Models\Modelo::class, function (Faker\Generator $faker) {
     return [
-        'nome' => $faker->sentence($nbWords=3, $varicao = true)
+        'nome' => $faker->sentence($nbWords = 3, $varicao = true),
+        'tempo_id' => rand(1, 30),
+        'visor_pontuacao_id' => rand(1, 40)
     ];
 });
