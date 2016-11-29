@@ -2,6 +2,13 @@
 
 <li class="{{ Request::is('instrucaoInicials*') ? 'active' : '' }}">
     <a href="{!! route('instrucaoInicials.index') !!}">
+        <i class="fa fa-tachometer"></i>
+        <span> Dashboard</span>
+    </a>
+</li>
+
+<li class="{{ Request::is('instrucaoInicials*') ? 'active' : '' }}">
+    <a href="{!! route('instrucaoInicials.index') !!}">
         <i class="fa fa-commenting-o"></i>
         <span> Instruções Iniciais</span>
     </a>
@@ -37,7 +44,7 @@
 
 <li class="{{ Request::is('cartas*') ? 'active' : '' }}">
     <a href="{!! route('cartas.index') !!}">
-        <i class="fa fa-address-book"></i>
+        <i class="fa fa-book"></i>
         <span> Cartas</span>
     </a>
 </li>
@@ -46,5 +53,26 @@
     <a href="{!! route('fases.index') !!}">
         <i class="fa fa-cubes"></i>
         <span> Fases</span>
+    </a>
+</li>
+
+<li class="{{ Request::is('regraExtras*') ? 'active' : '' }}">
+    <a href="{!! route('regraExtras.index') !!}">
+        <i class="fa fa-flask"></i>
+        <span> Regra Extras</span>
+    </a>
+</li>
+
+<li class="{{ Request::is('modelos*') ? 'active' : '' }}">
+    <a href="{!! route('modelos.index') !!}">
+        <i class="fa fa-gamepad"></i>
+        <span> Modelos</span>
+    </a>
+</li>
+
+<li class="{{ Request::is('modelos*') ? 'active' : '' }}">
+    <a href="{!! route('modelos.index') !!}">
+        <i class="fa fa-users"></i>
+        <span> Usuários</span>
     </a>
 </li>
