@@ -17,5 +17,11 @@ class UsersTableSeeder extends Seeder
             'email' => 'luitamy@hotmail.com',
             'role' => 'admin'
         ]);
+
+        factory(User::class)->create([
+            'name' => 'João Ilo',
+            'email' => 'ilo@cemp.com.br',
+            'role' => 'admin'
+        ]);
     }
 }
