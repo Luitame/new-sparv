@@ -72,3 +72,9 @@ $factory->define(App\Models\RegraExtra::class, function (Faker\Generator $faker)
         'pontos' => $faker->numberBetween($min = 0, $max = 13)
     ];
 });
+
+$factory->define(App\Models\Modelo::class, function (Faker\Generator $faker) {
+    return [
+        'nome' => $faker->sentence($nbWords=3, $varicao = true)
+    ];
+});
