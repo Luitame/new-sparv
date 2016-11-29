@@ -19,5 +19,6 @@ class DatabaseSeeder extends Seeder
          $this->call(VisorPontuacaoSeender::class);
          $this->call(CartaSeeder::class);
          $this->call(FaseSeeder::class);
+         $this->call(RegraExtraSeeder::class);
     }
 }
