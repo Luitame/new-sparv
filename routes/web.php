@@ -35,3 +35,5 @@ Route::resource('visorPontuacaos', 'VisorPontuacaoController');
 Route::resource('fases', 'FaseController');
 
 Route::resource('regraExtras', 'RegraExtraController');
+
+Route::resource('modelos', 'ModeloController');
