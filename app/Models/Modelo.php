@@ -15,7 +15,9 @@ class Modelo extends Model
     public $table = 'modelos';
 
     public $fillable = [
-        'nome'
+        'nome',
+        'tempo_id',
+        'visor_pontuacao_id'
     ];
 
     /**
@@ -24,7 +26,9 @@ class Modelo extends Model
      * @var array
      */
     protected $casts = [
-        'nome' => 'string'
+        'nome' => 'string',
+        'tempo_id' => 'integer',
+        'visor_pontuacao_id' => 'integer'
     ];
 
     /**
@@ -33,8 +37,13 @@ class Modelo extends Model
      * @var array
      */
     public static $rules = [
-        'nome' => 'required'
+        'nome' => 'required',
+        'tempo_id' => 'required',
+        'visor_pontuacao_id' => 'required'
     ];
 
+    public function tempo(){
+        return $this->belongsTo(Tempo::class);
+    }
     
 }
