@@ -14,8 +14,6 @@ class InstrucaoInicial extends Model
 
     public $table = 'instrucao_inicials';
     
-
-
     public $fillable = [
         'instrucaoTxt'
     ];
@@ -38,5 +36,9 @@ class InstrucaoInicial extends Model
         'instrucaoTxt' => 'required|max:255'
     ];
 
-    
+    public function modelos()
+    {
+        return $this->belongsToMany(Modelo::class, 'modelos_instrucao_inicials');
+    }
+
 }

@@ -52,4 +52,18 @@ class Modelo extends Model
         return $this->belongsTo(VisorPontuacao::class);
     }
 
+    public function fases()
+    {
+        return $this->belongsToMany(Fase::class, 'modelos_fases')->withTimestamps();
+    }
+
+    public function regraExtras()
+    {
+        return $this->belongsToMany(RegraExtra::class, 'modelos_regra_extras')->withTimestamps();
+    }
+
+    public function instrucaoInicials()
+    {
+        return $this->belongsToMany(InstrucaoInicial::class, 'modelos_instrucao_inicials')->withTimestamps();
+    }
 }
