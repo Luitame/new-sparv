@@ -31,3 +31,5 @@ Route::resource('tempos', 'TempoAPIController');
 Route::resource('visor_pontuacaos', 'VisorPontuacaoAPIController');
 
 Route::resource('fases', 'FaseAPIController');
+
+Route::resource('regra_extras', 'RegraExtraAPIController');
