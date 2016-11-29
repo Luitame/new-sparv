@@ -63,3 +63,12 @@ $factory->define(App\Models\Fase::class, function (Faker\Generator $faker) {
         'pontos' => $faker->numberBetween($min = 0, $max = 13),
     ];
 });
+
+$factory->define(App\Models\RegraExtra::class, function (Faker\Generator $faker) {
+    return [
+        'inicio' => '00:0' . $faker->numberBetween($min = 1, $max = 9) . ':0' . $faker->numberBetween($min = 0, $max = 9),
+        'fim' => '00:0' . $faker->numberBetween($min = 1, $max = 9) . ':0' . $faker->numberBetween($min = 0, $max = 9),
+        'criterio' => $faker->randomElement(['esquerdo', 'direito', 'ambos']),
+        'pontos' => $faker->numberBetween($min = 0, $max = 13)
+    ];
+});
