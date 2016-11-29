@@ -30,10 +30,9 @@ class FaseController extends AppBaseController
     public function index(Request $request)
     {
         $this->faseRepository->pushCriteria(new RequestCriteria($request));
-        $fases = $this->faseRepository->all();
+        $fases = $this->faseRepository->paginate(8);
 
-        return view('fases.index')
-            ->with('fases', $fases);
+        return view('fases.index', compact('fases'));
     }
 
     /**

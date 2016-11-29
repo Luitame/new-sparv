@@ -16,6 +16,10 @@
         <div class="box box-primary">
             <div class="box-body">
                     @include('fases.table')
+                <hr>
+                <div class="pull-right">
+                    {!! $fases->render() !!}
+                </div>
             </div>
         </div>
     </div>
