@@ -42,8 +42,14 @@ class Modelo extends Model
         'visor_pontuacao_id' => 'required'
     ];
 
-    public function tempo(){
+    public function tempo()
+    {
         return $this->belongsTo(Tempo::class);
     }
-    
+
+    public function visorPontuacao()
+    {
+        return $this->belongsTo(VisorPontuacao::class);
+    }
+
 }

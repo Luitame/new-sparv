@@ -43,5 +43,10 @@ class VisorPontuacao extends Model
     {
         return ucfirst($value);
     }
-    
+
+    public function modelos()
+    {
+        return $this->hasMany(Modelo::class);
+    }
+
 }
