@@ -30,10 +30,9 @@ class RegraExtraController extends AppBaseController
     public function index(Request $request)
     {
         $this->regraExtraRepository->pushCriteria(new RequestCriteria($request));
-        $regraExtras = $this->regraExtraRepository->all();
+        $regraExtras = $this->regraExtraRepository->paginate(12);
 
-        return view('regra_extras.index')
-            ->with('regraExtras', $regraExtras);
+        return view('regra_extras.index', compact('regraExtras'));
     }
 
     /**

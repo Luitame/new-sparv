@@ -1,5 +1,6 @@
 <table class="table table-responsive table-hover" id="regraExtras-table">
     <thead>
+        <th>#</th>
         <th>Inicio</th>
         <th>Fim</th>
         <th>Criterio</th>
@@ -9,6 +10,7 @@
     <tbody>
     @foreach($regraExtras as $regraExtra)
         <tr>
+            <td>{!! $regraExtra->id !!}</td>
             <td>{!! $regraExtra->inicio !!}</td>
             <td>{!! $regraExtra->fim !!}</td>
             <td>{!! $regraExtra->criterio !!}</td>
