@@ -17,7 +17,7 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index');
+Route::get('/home', ['as' => 'home.index', 'uses' => 'HomeController@index']);
 
 Route::resource('instrucaoInicials', 'InstrucaoInicialController');
 
