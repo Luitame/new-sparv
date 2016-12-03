@@ -15,7 +15,6 @@ Route::get('/', function () {
     return redirect('home');
 });
 
-
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
@@ -37,3 +36,5 @@ Route::resource('fases', 'FaseController');
 Route::resource('regraExtras', 'RegraExtraController');
 
 Route::resource('modelos', 'ModeloController');
+
+Route::get('/usuarios', 'UsuarioController@index');
