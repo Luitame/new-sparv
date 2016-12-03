@@ -70,8 +70,8 @@
     </a>
 </li>
 
-<li class="{{ Request::is('modelos*') ? 'active' : '' }}">
-    <a href="{!! route('modelos.index') !!}">
+<li class="{{ Request::is('usuarios*') ? 'active' : '' }}">
+    <a href="{!! route('usuarios.index') !!}">
         <i class="fa fa-users"></i>
         <span> Usuários</span>
     </a>

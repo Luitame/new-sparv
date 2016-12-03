@@ -37,4 +37,4 @@ Route::resource('regraExtras', 'RegraExtraController');
 
 Route::resource('modelos', 'ModeloController');
 
-Route::get('/usuarios', 'UsuarioController@index');
+Route::get('/usuarios', ['as' => 'usuarios.index', 'uses' => 'UsuarioController@index']);
