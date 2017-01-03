@@ -36,7 +36,7 @@
     <div class="col-sm-12">
         <div class="form-group">
             {!! Form::label('criterio', 'Criterio:') !!}
-            <p>{!! $regraExtra->criterio !!}</p>
+            <p>{!! ucfirst($regraExtra->criterio) !!}</p>
         </div>
     </div>
 </div>
@@ -47,6 +47,28 @@
         <div class="form-group">
             {!! Form::label('pontos', 'Pontos:') !!}
             <p>{!! $regraExtra->pontos !!}</p>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-sm-12">
+        <div class="panel panel-info">
+            <div class="panel-heading"><h3 class="panel-title">Mensagens</h3></div>
+            <div class="panel-body">
+                @include('regra_extras.table_mensagems')
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-sm-12">
+        <div class="panel panel-success">
+            <div class="panel-heading"><h3 class="panel-title">Perguntas</h3></div>
+            <div class="panel-body">
+                @include('regra_extras.table_perguntas')
+            </div>
         </div>
     </div>
 </div>

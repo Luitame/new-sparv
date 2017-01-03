@@ -47,12 +47,16 @@ class RegraExtra extends Model
 
     public function mensagems()
     {
-        return $this->belongsToMany(Mensagem::class, 'regra_extras_mensagems')->withTimestamps();
+        return $this->belongsToMany(Mensagem::class, 'regra_extras_mensagems')
+            ->withTimestamps()
+            ->withPivot('ordem', 'pontos');
     }
 
     public function perguntas()
     {
-        return $this->belongsToMany(Pergunta::class, 'regra_extras_perguntas')->withTimestamps();
+        return $this->belongsToMany(Pergunta::class, 'regra_extras_perguntas')
+            ->withTimestamps()
+            ->withPivot('ordem', 'pontos');
     }
 
     public function modelos()
