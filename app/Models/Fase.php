@@ -63,9 +63,4 @@ class Fase extends Model
         return $this->belongsToMany(Modelo::class, 'modelos_fases');
     }
 
-    public function getCriterioAttribute($value)
-    {
-        return ucfirst($value);
-    }
-
 }
