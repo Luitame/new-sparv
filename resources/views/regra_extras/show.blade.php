@@ -3,7 +3,7 @@
 @section('content')
     <section class="content-header">
         <h1>
-            Regra Extra
+            Regra Extra #{{$regraExtra->id}}
         </h1>
     </section>
     <div class="content">
