@@ -11,30 +11,21 @@
 |
 */
 
-Route::get('/', function () {
-    return redirect('home');
-});
-
 Auth::routes();
 
-Route::get('/home', ['as' => 'home.index', 'uses' => 'HomeController@index']);
-
-Route::resource('instrucaoInicials', 'InstrucaoInicialController');
-
-Route::resource('mensagems', 'MensagemController');
-
-Route::resource('perguntas', 'PerguntaController');
-
-Route::resource('cartas', 'CartaController');
-
-Route::resource('tempos', 'TempoController');
-
-Route::resource('visorPontuacaos', 'VisorPontuacaoController');
-
-Route::resource('fases', 'FaseController');
-
-Route::resource('regraExtras', 'RegraExtraController');
-
-Route::resource('modelos', 'ModeloController');
-
-Route::get('/usuarios', ['as' => 'usuarios.index', 'uses' => 'UsuarioController@index']);
+Route::group(['middleware' => 'auth'], function () {
+    Route::get('/', function () {
+        return redirect('home');
+    });
+    Route::get('/home', ['as' => 'home.index', 'uses' => 'HomeController@index']);
+    Route::resource('instrucaoInicials', 'InstrucaoInicialController');
+    Route::resource('mensagems', 'MensagemController');
+    Route::resource('perguntas', 'PerguntaController');
+    Route::resource('cartas', 'CartaController');
+    Route::resource('tempos', 'TempoController');
+    Route::resource('visorPontuacaos', 'VisorPontuacaoController');
+    Route::resource('fases', 'FaseController');
+    Route::resource('regraExtras', 'RegraExtraController');
+    Route::resource('modelos', 'ModeloController');
+    Route::get('/usuarios', ['as' => 'usuarios.index', 'uses' => 'UsuarioController@index']);
+});
