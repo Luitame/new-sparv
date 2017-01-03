@@ -63,4 +63,12 @@ class RegraExtra extends Model
     {
         return $this->belongsToMany(Modelo::class, 'modelos_regra_extras');
     }
+
+    public function getCriterioAttribute($value){
+        if(is_string($value)){
+            return ucfirst($value);
+        }
+        return $value;
+    }
+
 }
