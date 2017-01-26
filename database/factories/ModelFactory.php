@@ -64,6 +64,24 @@ $factory->define(App\Models\Fase::class, function (Faker\Generator $faker) {
     ];
 });
 
+$factory->define(App\Models\FaseMensagem::class, function (Faker\Generator $faker) {
+    return [
+        'fase_id' => rand(1, 10),
+        'mensagem_id' => rand(1, 30),
+        'ordem' => $faker->randomElement(['antes', 'depois']),
+        'pontos' => rand(1, 13)
+    ];
+});
+
+$factory->define(App\Models\FasePergunta::class, function (Faker\Generator $faker) {
+    return [
+        'fase_id' => rand(1, 10),
+        'pergunta_id' => rand(1, 30),
+        'ordem' => $faker->randomElement(['antes', 'depois']),
+        'pontos' => rand(1, 13)
+    ];
+});
+
 $factory->define(App\Models\RegraExtra::class, function (Faker\Generator $faker) {
     return [
         'inicio' => '00:0' . $faker->numberBetween($min = 1, $max = 9) . ':0' . $faker->numberBetween($min = 0, $max = 9),
