@@ -32,6 +32,10 @@ Route::resource('visor_pontuacaos', 'VisorPontuacaoAPIController');
 
 Route::resource('fases', 'FaseAPIController');
 
+Route::resource('fases_mensagems', 'FaseMensagemAPIController');
+
+Route::resource('fases_perguntas', 'FasePerguntaAPIController');
+
 Route::resource('regra_extras', 'RegraExtraAPIController');
 
 Route::resource('modelos', 'ModeloAPIController');
