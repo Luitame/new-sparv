@@ -91,6 +91,24 @@ $factory->define(App\Models\RegraExtra::class, function (Faker\Generator $faker)
     ];
 });
 
+$factory->define(App\Models\RegraExtraMensagem::class, function (Faker\Generator $faker) {
+    return [
+        'regra_extra_id' => rand(1, 10),
+        'mensagem_id' => rand(1, 10),
+        'ordem' => $faker->randomElement(['antes', 'depois']),
+        'pontos' => $faker->numberBetween($min = 0, $max = 13)
+    ];
+});
+
+$factory->define(App\Models\RegraExtraPergunta::class, function (Faker\Generator $faker) {
+    return [
+        'regra_extra_id' => rand(1, 10),
+        'pergunta_id' => rand(1, 30),
+        'ordem' => $faker->randomElement(['antes', 'depois']),
+        'pontos' => rand(1, 13)
+    ];
+});
+
 $factory->define(App\Models\Modelo::class, function (Faker\Generator $faker) {
     return [
         'nome' => $faker->sentence($nbWords = 3, $varicao = true),
