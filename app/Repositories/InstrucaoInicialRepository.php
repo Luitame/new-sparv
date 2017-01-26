@@ -11,8 +11,13 @@ class InstrucaoInicialRepository extends BaseRepository
      * @var array
      */
     protected $fieldSearchable = [
-        'instrucaoTxt'
+        'instrucaoTxt' => 'like'
     ];
+
+    public function boot()
+    {
+        $this->pushCriteria(app('Prettus\Repository\Criteria\RequestCriteria'));
+    }
 
     /**
      * Configure the Model

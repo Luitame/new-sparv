@@ -19,6 +19,7 @@ class CreateModelosFasesTable extends Migration
             $table->foreign('modelo_id')->references('id')->on('modelos');
             $table->unsignedInteger('fase_id');
             $table->foreign('fase_id')->references('id')->on('fases');
+            $table->unsignedInteger('indice');
             $table->timestamps();
         });
     }

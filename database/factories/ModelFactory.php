@@ -80,3 +80,26 @@ $factory->define(App\Models\Modelo::class, function (Faker\Generator $faker) {
         'visor_pontuacao_id' => rand(1, 40)
     ];
 });
+
+$factory->define(App\Models\ModeloInstrucaoInicial::class, function (Faker\Generator $faker) {
+    return [
+        'modelo_id' => rand(1, 5),
+        'instrucao_inicial_id' => rand(1, 10),
+        'ordem' => rand(0, 1)
+    ];
+});
+
+$factory->define(App\Models\ModeloFase::class, function (Faker\Generator $faker) {
+    return [
+        'modelo_id' => rand(1, 5),
+        'fase_id' => rand(1, 10),
+        'indice' => $faker->numerify('##')
+    ];
+});
+
+$factory->define(App\Models\ModeloRegraExtra::class, function (Faker\Generator $faker) {
+    return [
+        'modelo_id' => rand(1, 10),
+        'regra_extra_id' => rand(1, 5)
+    ];
+});

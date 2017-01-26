@@ -19,5 +19,6 @@ class DatabaseSeeder extends Seeder
          $this->call(FaseSeeder::class);
          $this->call(RegraExtraSeeder::class);
          $this->call(ModeloSeeder::class);
+         $this->call(ModeloInstrucaoInicialSeeder::class);
     }
 }
