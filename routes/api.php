@@ -38,4 +38,8 @@ Route::resource('fases_perguntas', 'FasePerguntaAPIController');
 
 Route::resource('regra_extras', 'RegraExtraAPIController');
 
+Route::resource('regra_extras_mensagems', 'RegraExtraMensagemAPIController');
+
+Route::resource('regra_extras_perguntas', 'RegraExtraPerguntaAPIController');
+
 Route::resource('modelos', 'ModeloAPIController');
