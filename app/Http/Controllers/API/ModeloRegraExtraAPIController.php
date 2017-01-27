@@ -5,6 +5,7 @@ namespace App\Http\Controllers\API;
 use App\Http\Requests\API\CreateModeloAPIRequest;
 use App\Http\Requests\API\UpdateModeloAPIRequest;
 use App\Models\Modelo;
+use App\Repositories\ModeloRegraExtraRepository;
 use App\Repositories\ModeloRepository;
 use Illuminate\Http\Request;
 use App\Http\Controllers\AppBaseController;
@@ -21,7 +22,7 @@ class ModeloRegraExtraAPIController extends AppBaseController
     /** @var  ModeloRepository */
     private $modeloRegraExtraRepository;
 
-    public function __construct(ModeloRepository $modeloRegraExtraRepo)
+    public function __construct(ModeloRegraExtraRepository $modeloRegraExtraRepo)
     {
         $this->modeloRegraExtraRepository = $modeloRegraExtraRepo;
     }
