@@ -43,3 +43,7 @@ Route::resource('regra_extras_mensagems', 'RegraExtraMensagemAPIController');
 Route::resource('regra_extras_perguntas', 'RegraExtraPerguntaAPIController');
 
 Route::resource('modelos', 'ModeloAPIController');
+
+Route::resource('modelos_instrucao_inicials', 'ModeloInstrucaoInicialAPIController');
+
+Route::resource('modelos_regra_extras', 'ModeloRegraExtraAPIController');
