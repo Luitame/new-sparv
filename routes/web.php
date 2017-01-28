@@ -15,9 +15,13 @@ Auth::routes();
 
 Route::group(['middleware' => 'auth'], function () {
     Route::get('/', function () {
-        return redirect('home');
+        return redirect(route('instrucaoInicials.index'));
     });
-    Route::get('/home', ['as' => 'home.index', 'uses' => 'HomeController@index']);
+
+    Route::get('/home', function (){
+        return redirect(route('instrucaoInicials.index'));
+    });
+
     Route::resource('instrucaoInicials', 'InstrucaoInicialController');
     Route::resource('mensagems', 'MensagemController');
     Route::resource('perguntas', 'PerguntaController');

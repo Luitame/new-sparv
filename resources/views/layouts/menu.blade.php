@@ -1,7 +1,7 @@
 <li class="header">Navegação Principal</li>
 
 <li class="{{ Request::is('home*') ? 'active' : '' }}">
-    <a href="{!! route('home.index') !!}">
+    <a href="">
         <i class="fa fa-tachometer"></i>
         <span> Dashboard</span>
     </a>
