@@ -27,7 +27,7 @@
     <script src="https://cdn.datatables.net/1.10.13/js/dataTables.bootstrap.min.js"></script>
     <script>
         $(document).ready(function () {
-            const urlApi = "//sparv.dev/api/";
+            const urlApi = "//localhost:8000/api/";
             const urlTranslate = "http://cdn.datatables.net/plug-ins/1.10.13/i18n/Portuguese-Brasil.json";
 
             $('#instrucoesIniciais').DataTable({
