@@ -1,0 +1,16 @@
+{
+  "name": "sparv",
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "https://github.com/Luitame/new-sparv",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "vendor/bower_components/",
+    "test",
+    "tests"
+  ]
+}
