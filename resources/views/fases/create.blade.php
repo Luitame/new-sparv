@@ -24,6 +24,3 @@
         </div>
     </div>
 @endsection
-@section('scripts')
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
-@endsection
