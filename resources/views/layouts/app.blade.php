@@ -148,10 +148,14 @@
 <!-- AdminLTE App -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/admin-lte/2.3.3/js/app.min.js"></script>
 <script>
-    $(document).ready(function () {
-        $('select').select2({
-            minimumResultsForSearch: Infinity
-        });
+    $(function () {
+        onActiveselectTwo = function () {
+            $('select').select2({
+                minimumResultsForSearch: Infinity
+            });
+        };
+
+        onActiveselectTwo();
     });
 </script>
 @yield('scripts')
