@@ -13,7 +13,7 @@
 <div class="row">
     <div class="form-group col-sm-2">
         {!! Form::label('criterio', 'Criterio:') !!}
-        {!! Form::select('criterio', [], null, ['class' => 'form-control']) !!}
+        {!! Form::select('criterio', ['Esquerda', 'Direita', 'Ambos'], null, ['class' => 'form-control']) !!}
     </div>
 </div>
 
@@ -25,28 +25,41 @@
     </div>
 </div>
 
+<!-- Messages -->
 <div class="row">
     <div class="col-sm-12">
-        <div class="box box-info">
+
+        <!-- box message -->
+        <div class="box box-info" id="message">
+
             <div class="box-header with-border">
+
                 <h3 class="box-title">Mensagens</h3>
+
                 <div class="box-tools pull-right">
                     <button class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
                 </div>
+
             </div>
+
             <div class="box-body">
                 <div class="row">
                     <div class="col-sm-12">
-                        <span class="btn btn-primary pull-right mensagem-add">Adicionar</span>
+                        <span class="btn btn-primary btn-sm pull-right message-add">
+                            <i class="fa fa-plus" aria-hidden="true"></i>
+                        </span>
                     </div>
                 </div>
-                <div id="mensagem-wrapper">
-                    <!-- messages-box added here -->
-                </div>
+            </div>
+
+            <div class="box-footer" id="message-list" style="overflow: hidden;">
+                <!-- Messages box will be added here -->
             </div>
         </div>
+        <!-- /box message -->
     </div>
 </div>
+<!-- /Messages -->
 
 <div class="row">
     <div class="col-sm-12">
@@ -107,6 +120,7 @@
         <a href="{!! route('fases.index') !!}" class="btn btn-default">Voltar</a>
     </div>
 </div>
+
 @section('scripts')
     <script src="{{url('js/noty/packaged/jquery.noty.packaged.js')}}"></script>
     <script src="{{url('js/dynamic-boxes.js')}}"></script>
