@@ -11,8 +11,13 @@ class MensagemRepository extends BaseRepository
      * @var array
      */
     protected $fieldSearchable = [
-        'mensagemTxt'
+        'mensagemTxt' => 'like'
     ];
+
+    public function boot()
+    {
+        $this->pushCriteria(app(\Prettus\Repository\Criteria\RequestCriteria::class));
+    }
 
     /**
      * Configure the Model
