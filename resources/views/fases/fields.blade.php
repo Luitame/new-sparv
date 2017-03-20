@@ -120,8 +120,11 @@
         <a href="{!! route('fases.index') !!}" class="btn btn-default">Voltar</a>
     </div>
 </div>
-
+@section('css')
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+@endsection
 @section('scripts')
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="{{url('js/noty/packaged/jquery.noty.packaged.js')}}"></script>
     <script src="{{url('js/dynamic-boxes.js')}}"></script>
 @endsection
