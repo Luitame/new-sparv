@@ -11,6 +11,7 @@ $(function () {
     "                        <div class='form-group'>" +
     "                            <label>Mensagem</label>" +
     "                            <input name='mensagemTxt[]' type='text' class='form-control mensagemTxt'>" +
+    "                            <input name='mensagemId[]' type='hidden' class='form-control mensagemId'>" +
     "                        </div>" +
     "                    </div>" +
     "                    <div class='col-sm-2'>" +
@@ -78,14 +79,18 @@ $(function () {
   function onAutoComplete() {
     $(".mensagemTxt").autocomplete({
       source: function (request, response) {
-        $.getJSON("http://sparv-ufc.app/api/mensagems/?search=" + request.term, function (data) {
+        $.getJSON("http://sparv.app/api/mensagems/?search=" + request.term, function (data) {
           response($.map(data.data, function (value, key) {
             return {
               label: value.mensagemTxt,
-              value: key
+              value: value.mensagemTxt,
+              messagem_id: value.id
             };
           }));
         });
+      },
+      select: function (event, ui){
+        $(this).next(".mensagemId").val(ui.item.messagem_id);
       },
       minLength: 2,
       delay: 100
