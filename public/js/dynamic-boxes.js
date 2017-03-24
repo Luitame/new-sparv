@@ -1,7 +1,7 @@
 $(function () {
 
   // note plugins setup
-  $.noty.defaults.theme = 'bootstrapTheme';
+  $.noty.defaults.theme =  'bootstrapTheme';
   $.noty.defaults.timeout = 5000;
   $.noty.defaults.progressBar = true;
 
