@@ -15,6 +15,7 @@ class Fase extends Model
     public $table = 'fases';
 
     public $fillable = [
+        'carta_id',
         'criterio',
         'pontos'
     ];
@@ -25,6 +26,7 @@ class Fase extends Model
      * @var array
      */
     protected $casts = [
+        'carta_id' => 'integer',
         'criterio' => 'string',
         'pontos' => 'integer'
     ];
@@ -35,8 +37,13 @@ class Fase extends Model
      * @var array
      */
     public static $rules = [
-        'criterio' => 'required|min:5|max:8',
-        'pontos' => 'required|numeric|integer|between:0,13'
+        'carta_id' => 'required|numeric|integer|between:1,895',
+        'criterio' => 'required|string|min:5|max:8',
+        'pontos' => 'required|numeric|integer|between:0,13',
+        'mensagemTxt.*' => 'required',
+        'mensagemId.*' => 'required|numeric|integer|exists:cartas,id',
+        'mensagemOrdem.*' => 'required|string|min:5|max:6',
+        'mensagemPontos.*' => 'required|numeric|integer|between:0,13'
     ];
 
     public function carta()
