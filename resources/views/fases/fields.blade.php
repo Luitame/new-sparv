@@ -20,6 +20,10 @@
         border: none;
         padding: 3px 6px;
     }
+
+    .message-nothing-text {
+        padding: 2rem;
+    }
 </style>
 <div class="row">
     <div class="col-sm-3 card_image">
@@ -31,7 +35,7 @@
 <div class="row">
     <div class="form-group col-sm-1">
         {!! Form::label('carta', 'Carta:') !!}
-        {!! Form::select('carta_id', range(0, 895), null, ['class' => 'form-control', 'required']) !!}
+        {!! Form::select('carta_id', range(2, 895), null, ['class' => 'form-control', 'required']) !!}
     </div>
     <div class="form-group col-sm-2">
         <a style="margin-top: 25px;" href="#" class="btn btn-warning btn-sm random_card">Escolher carta aleatória</a>
@@ -59,19 +63,19 @@
     <div class="col-sm-12">
 
         <!-- box message -->
-        <div class="box box-info" id="message">
+        <div class="box box-info collapsed-box" id="message">
 
             <div class="box-header with-border">
 
                 <h3 class="box-title">Mensagens</h3>
 
                 <div class="box-tools pull-right">
-                    <button class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                    <button class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-plus"></i></button>
                 </div>
 
             </div>
 
-            <div class="box-body">
+            <div class="box-body" style="display: none;">
                 <div class="row">
                     <div class="col-sm-12">
                         <span class="btn btn-primary btn-sm pull-right message-add">
@@ -82,6 +86,11 @@
             </div>
 
             <div class="box-footer" id="message-list" style="overflow: hidden;">
+                <div class='row message-item' id="message-nothing-item" style='border-bottom: 1px solid #f5f5f5; margin-top: 15px;'>
+                    <div class="col-sm-12 bg-warning message-nothing-text">
+                        Nenhuma mensagem adicionada à esta fase
+                    </div>
+                </div>
                 <!-- Messages box will be added here -->
             </div>
         </div>
