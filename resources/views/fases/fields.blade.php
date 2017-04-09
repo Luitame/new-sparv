@@ -1,44 +1,32 @@
 <style>
-    .ui-menu .ui-menu-item {
-        color: #444;
-        padding: 3px 0px;
-        border-bottom: 1px solid #ccc;
-    }
-
-    .ui-menu-item .ui-menu-item-wrapper:hover {
-        padding: 3px 6px;
-    }
-
-    .ui-state-active,
-    .ui-widget-content .ui-state-active,
-    .ui-widget-header .ui-state-active,
-    a.ui-button:active,
-    .ui-button:active,
-    .ui-button.ui-state-active:hover {
-        color: white;
-        background: #3C8DBC;
-        border: none;
-        padding: 3px 6px;
-    }
-
-    .message-nothing-text {
-        padding: 2rem;
-    }
 </style>
 <div class="row">
-    <div class="col-sm-3 card_image">
-
-    </div>
+    <div class="col-sm-3 card_image"></div>
 </div>
 
 <!-- Carta Field -->
 <div class="row">
-    <div class="form-group col-sm-1">
+    <div class="form-group col-sm-3">
         {!! Form::label('carta', 'Carta:') !!}
-        {!! Form::select('carta_id', range(2, 895), null, ['class' => 'form-control', 'required']) !!}
+        <i
+            class="fa fa-question-circle-o"
+            aria-hidden="true"
+            tabindex="0"
+            data-toggle="popover"
+            data-trigger="focus"
+            title="Cartas"
+            data-content="O baralho possui 895 cartas. Há duas formas de escolher uma carta para a fase. Uma é pressionar o botão 'Escolher Carta Aleatória' e a segunda e última forma é digitar um número entre 1 e 895. Ao digitar e sair do campo o software automaticamente selecionar a carta e lhe mostra uma previsualização. Ok?">
+        </i>
+        <div class="row">
+            <div class="col-sm-4">
+                {!! Form::text('carta_id', null, ['id' => 'carta_id', 'class' => 'form-control', 'required']) !!}
+            </div>
+            <div class="col-sm-3">
+                <a style="margin-top: 2px;" href="#" class="btn btn-warning btn-sm random_card">Escolher carta aleatória</a>
+            </div>
+        </div>
     </div>
     <div class="form-group col-sm-2">
-        <a style="margin-top: 25px;" href="#" class="btn btn-warning btn-sm random_card">Escolher carta aleatória</a>
     </div>
 </div>
 
@@ -86,7 +74,8 @@
             </div>
 
             <div class="box-footer" id="message-list" style="overflow: hidden;">
-                <div class='row message-item' id="message-nothing-item" style='border-bottom: 1px solid #f5f5f5; margin-top: 15px;'>
+                <div class='row message-item' id="message-nothing-item"
+                     style='border-bottom: 1px solid #f5f5f5; margin-top: 15px;'>
                     <div class="col-sm-12 bg-warning message-nothing-text">
                         Nenhuma mensagem adicionada à esta fase
                     </div>
@@ -113,4 +102,7 @@
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="{{url('js/noty/packaged/jquery.noty.packaged.js')}}"></script>
     <script src="{{url('js/dynamic-boxes.js')}}"></script>
+    <script>
+        $('i').popover({});
+    </script>
 @endsection
