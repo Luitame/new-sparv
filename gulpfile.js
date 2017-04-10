@@ -14,6 +14,9 @@ require('laravel-elixir-vue');
  */
 
 elixir(mix => {
-    mix.sass('app.scss')
-       .webpack('app.js');
+  mix
+    .sass('app.scss')
+    .webpack('app.js')
+
+    .copy('vendor/bower_components/mustache.js/mustache.min.js', 'public/js/mustache.min.js');
 });
