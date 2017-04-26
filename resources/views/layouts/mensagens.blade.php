@@ -53,3 +53,7 @@
     </div>
 </template>
 <!-- ./ Message Template -->
+
+@section('scripts')
+    <script src="{{url('js/mensagens.js')}}"></script>
+@endsection

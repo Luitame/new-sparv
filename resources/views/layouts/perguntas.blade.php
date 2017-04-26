@@ -48,8 +48,13 @@
 </template>
 
 <template id="pergunta-nothing-item-element">
-    <div class='row pergunta-item' id='pergunta-nothing-item' style='border-bottom: 1px solid #f5f5f5; margin-top: 15px;'>
+    <div class='row pergunta-item' id='pergunta-nothing-item'
+         style='border-bottom: 1px solid #f5f5f5; margin-top: 15px;'>
         <div class='col-sm-12 bg-warning' style="padding: 2rem;">Nenhuma pergunta adicionada à esta fase</div>
     </div>
 </template>
 <!-- ./ Pergunta Template -->
+
+@section('scripts')
+    <script src="{{url('js/perguntas.js')}}"></script>
+@endsection
