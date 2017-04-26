@@ -1,3 +1,46 @@
+<!-- Perguntas -->
+<div class="row">
+    <div class="col-sm-12">
+
+        <!-- box pergunta -->
+        <div class="box box-warning collapsed-box" id="message">
+
+            <div class="box-header with-border">
+
+                <h3 class="box-title">Perguntas</h3>
+
+                <div class="box-tools pull-right">
+                    <button class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-plus"></i></button>
+                </div>
+
+            </div>
+
+            <div class="box-body" style="display: none;">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <span class="btn btn-primary btn-sm pull-right pergunta-add">
+                            <i class="fa fa-plus" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="box-footer" id="pergunta-list" style="overflow: hidden;">
+                <div id="pergunta-nothing-item"
+                     class='row pergunta-item'
+                     style='border-bottom: 1px solid #f5f5f5; margin-top: 15px;'>
+                    <div class="col-sm-12 bg-warning" style="padding: 2rem;">
+                        Nenhuma pergunta adicionada à esta fase
+                    </div>
+                </div>
+                <!-- Messages box will be added here -->
+            </div>
+        </div>
+        <!-- /box pergunta -->
+    </div>
+</div>
+<!-- /Perguntas -->
+
 <!-- Pergunta Template -->
 <template id="pergunta-element">
     <div class='row pergunta-item' style='border-bottom: 1px solid #f5f5f5; margin-top: 15px;'>
@@ -54,7 +97,3 @@
     </div>
 </template>
 <!-- ./ Pergunta Template -->
-
-@section('scripts')
-    <script src="{{url('js/perguntas.js')}}"></script>
-@endsection
