@@ -178,7 +178,8 @@
 @endsection
 @section('scripts')
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <script src="{{url('js/dynamic-boxes.js')}}"></script>
+    <script src="{{url('js/card.js')}}"></script>
+    <script src="{{url('js/mensagens.js')}}"></script>
     <script>
         $('i').popover({});
     </script>
