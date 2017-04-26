@@ -1,42 +1,36 @@
 $(function () {
 
   var $messageList = $('#message-list');
-  var $messageItem = $(".message-item");
   var $mensagemElement = $('#message-element').html();
-  var $messageNothingItem = $('#message-nothing-item');
-  var $messageNothingItemTemplate = $('#message-nothing-item').html();
+  var $messageNothingItemTemplate = $("#message-nothing-item-element").html();
 
-  function onMessageDeleteClick() {
+  $('.message-add').click(function () {
+    if ($('#message-nothing-item').length === 1) {
+      $('#message-nothing-item').hide('slow', function () {
+        $(this).remove();
+      });
+    }
+    $messageList.append(Mustache.render($mensagemElement));
+  });
 
-    if ($messageItem.length !== 0) {
+  $($messageList).on('click', '.message-delete', function () {
+
+    if ($(".message-item").length !== 0) {
       $(this).parents('.message-item').hide('slow', function () {
         $(this).remove();
       });
     }
 
-    // if ($messageItem.length === 1) {
-    //   $messageList.fadeIn('slow', function () {
-    //     $(this).append(Mustache.render($messageNothingItemTemplate));
-    //   });
-    // }
-
-  };
-
-  function onMessageAdd() {
-    // removing message warning text in the add one message item
-    if ($messageNothingItem.length === 1) {
-      $messageNothingItem.hide('slow', function () {
-        $(this).remove();
+    if ($(".message-item").length === 1) {
+      $messageList.fadeIn('slow', function () {
+        $(this).append(Mustache.render($messageNothingItemTemplate));
       });
     }
-    $messageList.append(Mustache.render($mensagemElement));
-    onActiveselectTwo();
-    $('.message-delete').click(onMessageDeleteClick);
-    $('.mensagemTxt').keydown(onAutoComplete);
-  };
 
-  function onAutoComplete() {
-    $(".mensagemTxt").autocomplete({
+  });
+
+  $($messageList).on('keydown', '.mensagemTxt', function () {
+    $(this).autocomplete({
       source: function (request, response) {
         $.getJSON("http://sparv.app/api/mensagems/?search=" + request.term, function (data) {
           response($.map(data.data, function (value, key) {
@@ -54,7 +48,7 @@ $(function () {
       minLength: 2,
       delay: 100
     });
-  };
+  });
 
   function onGetCard(number) {
     $.getJSON("http://sparv.app/api/cartas/" + number, function (data) {
@@ -69,9 +63,7 @@ $(function () {
       }, 500);
       $("#carta_id").val(number.toString());
     });
-  }
-
-  $('.message-add').click(onMessageAdd);
+  };
 
   $(".random_card").click(function () {
     var cardNumber = Math.floor(Math.random() * (897 - 1) + 1);

@@ -73,7 +73,8 @@
             </div>
 
             <div class="box-footer" id="message-list" style="overflow: hidden;">
-                <div class='row message-item' id="message-nothing-item"
+                <div id="message-nothing-item"
+                     class='row message-item'
                      style='border-bottom: 1px solid #f5f5f5; margin-top: 15px;'>
                     <div class="col-sm-12 bg-warning" style="padding: 2rem;">
                         Nenhuma mensagem adicionada à esta fase
@@ -143,7 +144,7 @@
     </div>
 </template>
 
-<template id="message-nothing-item">
+<template id="message-nothing-item-element">
     <div class='row message-item' id='message-nothing-item' style='border-bottom: 1px solid #f5f5f5; margin-top: 15px;'>
         <div class='col-sm-12 bg-warning' style="padding: 2rem;">Nenhuma mensagem adicionada à esta fase</div>
     </div>
