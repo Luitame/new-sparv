@@ -139,12 +139,18 @@
 
 <!-- jQuery 2.1.4 -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.2/js/select2.min.js"></script>
 <!-- Mustache Template Engine -->
 <script src="{{ url("js/mustache.min.js") }}"></script>
 <!-- AdminLTE App -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/admin-lte/2.3.3/js/app.min.js"></script>
+<script>
+    $(function () {
+        $('i').popover({});
+    });
+</script>
 @yield('scripts')
 </body>
 </html>

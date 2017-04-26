@@ -170,9 +170,5 @@
     </style>
 @endsection
 @section('scripts')
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="{{url('js/card.js')}}"></script>
-    <script>
-        $('i').popover({});
-    </script>
 @endsection
