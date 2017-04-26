@@ -4,6 +4,7 @@ namespace App\Repositories;
 
 use App\Models\Mensagem;
 use InfyOm\Generator\Common\BaseRepository;
+use Prettus\Repository\Criteria\RequestCriteria;
 
 class MensagemRepository extends BaseRepository
 {
@@ -16,7 +17,7 @@ class MensagemRepository extends BaseRepository
 
     public function boot()
     {
-        $this->pushCriteria(app(\Prettus\Repository\Criteria\RequestCriteria::class));
+        $this->pushCriteria(app(RequestCriteria::class));
     }
 
     /**
