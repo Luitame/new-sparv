@@ -149,17 +149,6 @@
 <script src="{{ url("js/mustache.min.js") }}"></script>
 <!-- AdminLTE App -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/admin-lte/2.3.3/js/app.min.js"></script>
-<script>
-    $(function () {
-        onActiveselectTwo = function () {
-            $('select').select2({
-                minimumResultsForSearch: Infinity
-            });
-        };
-
-        onActiveselectTwo();
-    });
-</script>
 @yield('scripts')
 </body>
 </html>
