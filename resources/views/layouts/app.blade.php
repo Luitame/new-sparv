@@ -146,11 +146,13 @@
 <script src="{{ url("js/mustache.min.js") }}"></script>
 <!-- AdminLTE App -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/admin-lte/2.3.3/js/app.min.js"></script>
+<script src="{{url("js/mensagens.js")}}"></script>
+<script src="{{url("js/perguntas.js")}}"></script>
+@yield('scripts')
 <script>
     $(function () {
         $('i').popover({});
     });
 </script>
-@yield('scripts')
 </body>
 </html>
