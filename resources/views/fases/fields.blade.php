@@ -41,7 +41,7 @@
 <div class="row">
     <div class="form-group col-sm-1">
         {!! Form::label('pontos', 'Pontos:') !!}
-        {!! Form::select('pontos', range(1, 13), null, ['class' => 'form-control', 'required']) !!}
+        {!! Form::selectRange('pontos', 1, 13, null, ['class' => 'form-control', 'required']) !!}
     </div>
 </div>
 
