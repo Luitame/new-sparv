@@ -10,6 +10,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/admin-lte/2.3.3/css/AdminLTE.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/admin-lte/2.3.3/css/skins/_all-skins.min.css">
 
+    <!-- Datatables Styles-->
+    @include('layouts.datatables_css')
+
     @yield('css')
 </head>
 
@@ -143,9 +146,10 @@
 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.2/js/select2.min.js"></script>
 <!-- Mustache Template Engine -->
-<script src="{{ url("js/mustache.min.js") }}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.min.js"></script>
 <!-- AdminLTE App -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/admin-lte/2.3.3/js/app.min.js"></script>
+@include('layouts.datatables_js')
 <script src="{{url("js/mensagens.js")}}"></script>
 <script src="{{url("js/perguntas.js")}}"></script>
 @yield('scripts')
