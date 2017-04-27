@@ -6,23 +6,41 @@
     <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
 
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-    <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.2/css/bootstrap-select.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.2/css/bootstrap-select.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/admin-lte/2.3.3/css/AdminLTE.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/admin-lte/2.3.3/css/skins/_all-skins.min.css">
-
-    <!-- Datatables Styles-->
-    @include('layouts.datatables_css')
-
-    @yield('css')
-
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <style>
+        .ui-menu .ui-menu-item {
+            color: #444;
+            padding: 3px 0px;
+            border-bottom: 1px solid #ccc;
+        }
+        .ui-menu-item .ui-menu-item-wrapper:hover {
+            padding: 3px 6px;
+        }
+        .ui-state-active,
+        .ui-widget-content .ui-state-active,
+        .ui-widget-header .ui-state-active,
+        a.ui-button:active,
+        .ui-button:active,
+        .ui-button.ui-state-active:hover {
+            color: white;
+            background: #3C8DBC;
+            border: none;
+            padding: 3px 6px;
+        }
         button.dropdown-toggle,
         button.bs-placeholder {
             background: white !important;
         }
     </style>
+
+    <!-- Datatables Styles-->
+    @include('layouts.datatables_css')
+
+    @yield('css')
 </head>
 
 <body class="skin-blue sidebar-mini">
@@ -163,6 +181,7 @@
 @include('layouts.datatables_js')
 <script src="{{url("js/mensagens.js")}}"></script>
 <script src="{{url("js/perguntas.js")}}"></script>
+<script src="{{url('js/regraextra.js')}}"></script>
 @yield('scripts')
 <script>
     $(function () {
