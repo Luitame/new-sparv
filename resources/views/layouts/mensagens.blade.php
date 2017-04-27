@@ -15,25 +15,57 @@
 
             </div>
 
-            <div class="box-body" style="display: none;">
+            <div class="box-footer" style="overflow: hidden;">
                 <div class="row">
                     <div class="col-sm-12">
-                        <span class="btn btn-primary btn-sm pull-right message-add">
-                            <i class="fa fa-plus" aria-hidden="true"></i>
-                        </span>
+                        <div class="nav-tabs-custom tab-info">
+                            <ul class="nav nav-tabs">
+                                <li class="active">
+                                    <a href="#tab-message-create" data-toggle="tab" aria-expanded="true">Criar</a>
+                                </li>
+                                <li class="">
+                                    <a href="#tab-message-list" data-toggle="tab" aria-expanded="false">Listar</a>
+                                </li>
+                            </ul>
+                            <div class="tab-content" style="overflow: hidden;">
+                                <div class="tab-pane active" id="tab-message-create">
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <span class="btn btn-primary btn-sm pull-right message-add"><i
+                                                    class="fa fa-plus"></i></span>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <div class="row">
+                                        <div class="col-md-12" id="message-list">
+                                            <div id="message-nothing-item"
+                                                 class='row message-item'
+                                                 style='border-bottom: 1px solid #f5f5f5; margin-top: 15px;'>
+                                                <div class="col-sm-12 bg-warning" style="padding: 2rem;">
+                                                    Nenhuma mensagem adicionada à esta fase
+                                                </div>
+                                            </div>
+                                            <!-- Messages box will be added here -->
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /.tab-pane -->
+                                <div class="tab-pane" id="tab-message-list">
+                                    <table id="datatable-message-list" class="table table-hover table-condensed" width="100%">
+                                        <thead>
+                                            <tr>
+                                                <th>#</th>
+                                                <th>Mensagem</th>
+                                            </tr>
+                                        </thead>
+                                    </table>
+                                </div>
+                                <!-- /.tab-pane -->
+                            </div>
+                            <!-- /.tab-content -->
+                        </div>
                     </div>
                 </div>
-            </div>
-
-            <div class="box-footer" id="message-list" style="overflow: hidden;">
-                <div id="message-nothing-item"
-                     class='row message-item'
-                     style='border-bottom: 1px solid #f5f5f5; margin-top: 15px;'>
-                    <div class="col-sm-12 bg-warning" style="padding: 2rem;">
-                        Nenhuma mensagem adicionada à esta fase
-                    </div>
-                </div>
-                <!-- Messages box will be added here -->
             </div>
         </div>
         <!-- /box message -->

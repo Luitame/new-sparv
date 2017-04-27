@@ -50,4 +50,15 @@ $(function () {
     });
   });
 
+  $('#datatable-message-list').DataTable({
+    "ajax": "http://sparv.app/api/mensagems",
+    "columns": [
+      {"data": "id"},
+      {"data": "mensagemTxt"}
+    ],
+    "language": {
+      "url": "//cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/Portuguese-Brasil.json"
+    }
+  });
+
 });
