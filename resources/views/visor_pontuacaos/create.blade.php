@@ -24,4 +24,4 @@
         </div>
     </div>
 @endsection
-@include('vendor.mask.mask')
+@include('layouts.mask.mask')
