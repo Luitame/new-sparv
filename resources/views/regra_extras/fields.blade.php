@@ -18,6 +18,15 @@
 <div class="row">
     <div class="form-group col-sm-2">
         {!! Form::label('criterio', 'Critério/Loop:') !!}
+        <i class="fa fa-question-circle-o"
+           aria-hidden="true"
+           tabindex="0"
+           data-toggle="popover"
+           data-trigger="focus"
+           title=""
+           data-original-title="Critério/Loop"
+           data-content="O único detalhe que diferencía as regras extras são os critérios de movimentação ou o loop temporal em segundos. Assim sendo, se você definir Esquerda, Direita ou Ambos essa regra será de Movimentação. Já se você definir somente um valor numeral será uma R.E. de Tempo. Ok?">
+        </i>
         {!! Form::text('criterio', null, ['class' => 'form-control criterio', 'placeholder' => 'Segundo ou lado']) !!}
     </div>
 </div>
