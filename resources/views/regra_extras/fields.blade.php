@@ -18,7 +18,7 @@
 <div class="row">
     <div class="form-group col-sm-2">
         {!! Form::label('criterio', 'Critério/Loop:') !!}
-        {!! Form::text('criterio', null, ['class' => 'form-control', 'placeholder' => 'Segundo ou lado']) !!}
+        {!! Form::text('criterio', null, ['class' => 'form-control criterio', 'placeholder' => 'Segundo ou lado']) !!}
     </div>
 </div>
 
