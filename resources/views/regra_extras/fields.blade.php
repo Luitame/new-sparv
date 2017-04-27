@@ -30,109 +30,8 @@
     </div>
 </div>
 
-<div class="row">
-    <div class="col-sm-12">
-        <div class="box box-info">
-            <div class="box-header with-border">
-                <h3 class="box-title">Mensagens</h3>
-                <div class="box-tools pull-right">
-                    <button class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
-                </div>
-            </div>
-            <div class="box-body">
-                <div class="row">
-                    <div class="col-sm-12">
-                        <button class="btn btn-primary pull-right">Adicionar</button>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-sm-8">
-                        <input name="mensagemId[]" type="hidden">
-                        <div class="form-group">
-                            <label>Mensagem</label>
-                            <input name="mensagemTxt[]" type="text" class="form-control">
-                        </div>
-                    </div>
-                    <div class="col-sm-2">
-                        <div class="form-group">
-                            <label for="">Ordem</label>
-                            <select name="mensagemOrdem[]" class="form-control">
-                                <option value="antes">Antes</option>
-                                <option value="depois">Depois</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="col-sm-1">
-                        <div class="form-group">
-                            <label>Pontos</label>
-                            {!! Form::select('pontos', range(1, 13), null, ['class' => 'form-control']) !!}
-                        </div>
-                    </div>
-                    <div class="col-sm-1">
-                        <div class="form-group">
-                            <label></label>
-                            {{--<input type="submit" class="btn btn-sm btn-danger form-control" name="remover">--}}
-                            <button class="btn btn-danger">Remover</button>
-                        </div>
-                    </div>
-                    <hr>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="row">
-    <div class="col-sm-12">
-        <div class="box box-success">
-            <div class="box-header with-border">
-                <h3 class="box-title">Perguntas</h3>
-                <div class="box-tools pull-right">
-                    <button class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
-                </div>
-            </div>
-            <div class="box-body">
-                <div class="row">
-                    <div class="col-sm-12">
-                        <button class="btn btn-primary pull-right">Adicionar</button>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-sm-8">
-                        <input name="mensagemId[]" type="hidden">
-                        <div class="form-group">
-                            <label>Pergunta</label>
-                            <input name="mensagemTxt[]" type="text" class="form-control">
-                        </div>
-                    </div>
-                    <div class="col-sm-2">
-                        <div class="form-group">
-                            <label for="">Ordem</label>
-                            <select name="mensagemOrdem[]" class="form-control">
-                                <option value="antes">Antes</option>
-                                <option value="depois">Depois</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="col-sm-1">
-                        <div class="form-group">
-                            <label>Pontos</label>
-                            {!! Form::select('pontos', range(1, 13), null, ['class' => 'form-control']) !!}
-                        </div>
-                    </div>
-                    <div class="col-sm-1">
-                        <div class="form-group">
-                            <label></label>
-                            {{--<input type="submit" class="btn btn-sm btn-danger form-control" name="remover">--}}
-                            <button class="btn btn-danger">Remover</button>
-                        </div>
-                    </div>
-                    <hr>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+@include('layouts.mensagens')
+@include('layouts.perguntas')
 
 <!-- Submit Field -->
 <div class="row">
@@ -142,4 +41,4 @@
     </div>
 </div>
 
-@include('vendor.mask.mask')
+{{--@include('vendor.mask.mask')--}}

@@ -7,12 +7,11 @@
 
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.2/css/select2.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/admin-lte/2.3.3/css/AdminLTE.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/admin-lte/2.3.3/css/skins/_all-skins.min.css">
 
-    <!-- Ionicons -->
-    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <!-- Datatables Styles-->
+    @include('layouts.datatables_css')
 
     @yield('css')
 </head>
@@ -143,23 +142,21 @@
 
 <!-- jQuery 2.1.4 -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.2/js/select2.min.js"></script>
 <!-- Mustache Template Engine -->
-<script src="{{ url("js/mustache.min.js") }}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.min.js"></script>
 <!-- AdminLTE App -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/admin-lte/2.3.3/js/app.min.js"></script>
+@include('layouts.datatables_js')
+<script src="{{url("js/mensagens.js")}}"></script>
+<script src="{{url("js/perguntas.js")}}"></script>
+@yield('scripts')
 <script>
     $(function () {
-        onActiveselectTwo = function () {
-            $('select').select2({
-                minimumResultsForSearch: Infinity
-            });
-        };
-
-        onActiveselectTwo();
+        $('i').popover({});
     });
 </script>
-@yield('scripts')
 </body>
 </html>
