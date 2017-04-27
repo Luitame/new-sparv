@@ -22,4 +22,11 @@ class FaseRepository extends BaseRepository
     {
         return Fase::class;
     }
+
+    public function create(array $attributes)
+    {
+        dd($attributes);
+    }
+
+
 }
