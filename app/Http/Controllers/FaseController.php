@@ -56,7 +56,7 @@ class FaseController extends AppBaseController
     {
         $input = $request->all();
 
-        $fase = $this->faseRepository->create($input);
+        $fase = $this->faseRepository->createWithRelationships($input);
 
         Flash::success('<b>Fase</b> salvo com sucesso.');
 

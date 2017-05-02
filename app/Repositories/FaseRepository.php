@@ -23,10 +23,18 @@ class FaseRepository extends BaseRepository
         return Fase::class;
     }
 
-    public function create(array $attributes)
+    /**
+     * @param array $attributes
+     */
+    public function createWithRelationships(array $attributes)
     {
-        dd($attributes);
+        $fase = $this->model->create($attributes);
+
+        if (isset($attributes['mensagemId']) && !empty($attributes['mensagemId'])) {
+            for ($i = 0; $i <= count($attributes['mensagemId']); $i++) {
+                $this->model->mensagems()->attach($fase, ['mensagem_id' => $attributes['mensagemId'][$i], 'ordem' => $attributes['mensagemOrdem'][$i], 'pontos' => $attributes['mensagemPontos'][$i],]);
+//                $this->model->perguntas()->attach($fase, []);
+            }
+        }
     }
-
-
 }
