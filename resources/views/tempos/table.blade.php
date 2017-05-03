@@ -8,7 +8,7 @@
     <th colspan="3">Ação</th>
     </thead>
     <tbody>
-    @foreach($tempos as $tempo)
+    @forelse($tempos as $tempo)
         <tr>
             <td>{!! $tempo->id !!}</td>
             <td>{!! $tempo->total !!}</td>
@@ -19,14 +19,19 @@
                 {!! Form::open(['route' => ['tempos.destroy', $tempo->id], 'method' => 'delete']) !!}
                 <div class='btn-group'>
                     <a href="{!! route('tempos.show', [$tempo->id]) !!}" class='btn btn-default btn-xs'><i
-                                class="glyphicon glyphicon-eye-open"></i></a>
+                            class="glyphicon glyphicon-eye-open"></i></a>
                     <a href="{!! route('tempos.edit', [$tempo->id]) !!}" class='btn btn-default btn-xs'><i
-                                class="glyphicon glyphicon-edit"></i></a>
+                            class="glyphicon glyphicon-edit"></i></a>
                     {!! Form::button('<i class="glyphicon glyphicon-trash"></i>', ['type' => 'submit', 'class' => 'btn btn-danger btn-xs', 'onclick' => "return confirm('Você tem certeza?')"]) !!}
                 </div>
                 {!! Form::close() !!}
             </td>
         </tr>
-    @endforeach
+    @empty
+        <tr>
+            <td colspan="10" class="text-center bg-warning text-warning">Nenhuma <b>Definição de Tempo</b> cadastrada.
+            </td>
+        </tr>
+    @endforelse
     </tbody>
 </table>
