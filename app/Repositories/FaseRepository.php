@@ -28,12 +28,43 @@ class FaseRepository extends BaseRepository
      */
     public function createWithRelationships(array $attributes)
     {
+        $mensagems = $attributes['mensagemId'] ?? '';
+        $perguntas = $attributes['perguntaId'] ?? '';
+
         $fase = $this->model->create($attributes);
 
-        if (isset($attributes['mensagemId']) && !empty($attributes['mensagemId'])) {
-            for ($i = 0; $i <= count($attributes['mensagemId']); $i++) {
-                $this->model->mensagems()->attach($fase, ['mensagem_id' => $attributes['mensagemId'][$i], 'ordem' => $attributes['mensagemOrdem'][$i], 'pontos' => $attributes['mensagemPontos'][$i],]);
-//                $this->model->perguntas()->attach($fase, []);
+        if (!empty($mensagems)) {
+            foreach ($mensagems as $key => $mensagemId) {
+                $fase->mensagems()->attach($mensagemId, ['ordem' => $attributes['mensagemOrdem'][$key], 'pontos' => $attributes['mensagemPontos'][$key]]);
+            }
+        }
+
+        if (!empty($perguntas)) {
+            foreach ($perguntas as $key => $perguntaId) {
+                $fase->perguntas()->attach($perguntaId, ['ordem' => $attributes['mensagemOrdem'][$key], 'pontos' => $attributes['mensagemPontos'][$key]]);
+            }
+        }
+    }
+
+    /**
+     * @param array $attributes
+     */
+    public function updateWithRelationships(array $attributes, $id)
+    {
+        $mensagems = $attributes['mensagemId'] ?? '';
+        $perguntas = $attributes['perguntaId'] ?? '';
+
+        $fase = $this->model->update($attributes, $id);
+
+        if (!empty($mensagems)) {
+            foreach ($mensagems as $key => $mensagemId) {
+                $fase->mensagems()->sync($mensagemId, ['ordem' => $attributes['mensagemOrdem'][$key], 'pontos' => $attributes['mensagemPontos'][$key]]);
+            }
+        }
+
+        if (!empty($perguntas)) {
+            foreach ($perguntas as $key => $perguntaId) {
+                $fase->perguntas()->sync($perguntaId, ['ordem' => $attributes['mensagemOrdem'][$key], 'pontos' => $attributes['mensagemPontos'][$key]]);
             }
         }
     }
