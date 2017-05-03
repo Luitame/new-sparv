@@ -18,7 +18,7 @@
                     @include('instrucao_inicials.table')
                 <hr>
                 <div class="pull-right">
-                    {!! $instrucaoInicials->render() !!}}
+                    {!! $instrucaoInicials->render() !!}
                 </div>
             </div>
         </div>
