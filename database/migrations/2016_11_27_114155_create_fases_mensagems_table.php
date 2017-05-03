@@ -16,7 +16,7 @@ class CreateFasesMensagemsTable extends Migration
         Schema::create('fases_mensagems', function (Blueprint $table) {
             $table->increments('id');
             $table->unsignedInteger('fase_id');
-            $table->foreign('fase_id')->references('id')->on('fases');
+            $table->foreign('fase_id')->references('id')->on('fases')->onDelete('cascade');
             $table->unsignedInteger('mensagem_id');
             $table->foreign('mensagem_id')->references('id')->on('mensagems');
             $table->string('ordem');
