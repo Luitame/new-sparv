@@ -15,25 +15,68 @@
 
             </div>
 
-            <div class="box-body" style="display: none;">
+            {{--<div class="box-body" style="display: none;">--}}
+            {{--<div class="row">--}}
+            {{--<div class="col-sm-12">--}}
+            {{--<span class="btn btn-primary btn-sm pull-right pergunta-add">--}}
+            {{--<i class="fa fa-plus" aria-hidden="true"></i>--}}
+            {{--</span>--}}
+            {{--</div>--}}
+            {{--</div>--}}
+            {{--</div>--}}
+
+            <div class="box-footer" style="overflow: hidden;">
                 <div class="row">
                     <div class="col-sm-12">
-                        <span class="btn btn-primary btn-sm pull-right pergunta-add">
-                            <i class="fa fa-plus" aria-hidden="true"></i>
-                        </span>
+                        <div class="nav-tabs-custom tab-info">
+                            <ul class="nav nav-tabs">
+                                <li class="active">
+                                    <a href="#tab-pergunta-create" data-toggle="tab" aria-expanded="true">Criar</a>
+                                </li>
+                                <li class="">
+                                    <a href="#tab-pergunta-list" data-toggle="tab" aria-expanded="false">Listar</a>
+                                </li>
+                            </ul>
+                            <div class="tab-content" style="overflow: hidden;">
+                                <div class="tab-pane active" id="tab-pergunta-create">
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <span class="btn btn-primary btn-sm pull-right pergunta-add"><i
+                                                    class="fa fa-plus"></i></span>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <div class="row">
+                                        <div class="col-md-12" id="pergunta-list">
+                                            <div id="pergunta-nothing-item"
+                                                 class='row pergunta-item'
+                                                 style='border-bottom: 1px solid #f5f5f5; margin-top: 15px;'>
+                                                <div class="col-sm-12 bg-warning" style="padding: 2rem;">
+                                                    Nenhuma pergunta adicionada à esta fase
+                                                </div>
+                                            </div>
+                                            <!-- Messages box will be added here -->
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /.tab-pane -->
+                                <div class="tab-pane" id="tab-pergunta-list">
+                                    <table id="datatable-pergunta-list" class="table table-hover table-condensed"
+                                           width="100%">
+                                        <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>Pergunta</th>
+                                        </tr>
+                                        </thead>
+                                    </table>
+                                </div>
+                                <!-- /.tab-pane -->
+                            </div>
+                            <!-- /.tab-content -->
+                        </div>
                     </div>
                 </div>
-            </div>
-
-            <div class="box-footer" id="pergunta-list" style="overflow: hidden;">
-                <div id="pergunta-nothing-item"
-                     class='row pergunta-item'
-                     style='border-bottom: 1px solid #f5f5f5; margin-top: 15px;'>
-                    <div class="col-sm-12 bg-warning" style="padding: 2rem;">
-                        Nenhuma pergunta adicionada à esta fase
-                    </div>
-                </div>
-                <!-- Messages box will be added here -->
             </div>
         </div>
         <!-- /box pergunta -->
