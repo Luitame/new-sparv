@@ -2,7 +2,7 @@
 <div class="row">
     <div class="form-group col-sm-1">
         {!! Form::label('inicio', 'Total:') !!}
-        {!! Form::text('total', null, ['class' => 'form-control tempo', 'style' => 'padding:5px;']) !!}
+        {!! Form::text('total', null, ['class' => 'form-control tempo', 'placeholder'=> '00:00:00', 'style' => 'padding:5px;']) !!}
     </div>
 </div>
 
@@ -18,7 +18,7 @@
 <div class="row">
     <div class="form-group col-sm-1">
         {!! Form::label('mudandoEm', 'Muda em:') !!}
-        {!! Form::text('mudandoEm', null, ['class' => 'form-control tempo', 'style' => 'padding:5px;']) !!}
+        {!! Form::text('mudandoEm', null, ['class' => 'form-control tempo', 'placeholder'=> '00:00:00', 'style' => 'padding:5px;']) !!}
     </div>
 </div>
 
@@ -37,3 +37,5 @@
         <a href="{!! route('tempos.index') !!}" class="btn btn-default">Voltar</a>
     </div>
 </div>
+
+@include('layouts.mask.mask')

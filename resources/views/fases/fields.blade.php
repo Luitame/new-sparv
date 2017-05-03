@@ -41,7 +41,7 @@
 <div class="row">
     <div class="form-group col-sm-1">
         {!! Form::label('pontos', 'Pontos:') !!}
-        {!! Form::select('pontos', range(1, 13), null, ['class' => 'form-control', 'required']) !!}
+        {!! Form::selectRange('pontos', 1, 13, null, ['class' => 'form-control', 'required']) !!}
     </div>
 </div>
 
@@ -57,32 +57,6 @@
     </div>
 </div>
 
-@section('css')
-    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-    <style>
-        .ui-menu .ui-menu-item {
-            color: #444;
-            padding: 3px 0px;
-            border-bottom: 1px solid #ccc;
-        }
-
-        .ui-menu-item .ui-menu-item-wrapper:hover {
-            padding: 3px 6px;
-        }
-
-        .ui-state-active,
-        .ui-widget-content .ui-state-active,
-        .ui-widget-header .ui-state-active,
-        a.ui-button:active,
-        .ui-button:active,
-        .ui-button.ui-state-active:hover {
-            color: white;
-            background: #3C8DBC;
-            border: none;
-            padding: 3px 6px;
-        }
-    </style>
-@endsection
 @section('scripts')
     <script src="{{url('js/card.js')}}"></script>
 @endsection

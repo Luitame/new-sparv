@@ -2,7 +2,7 @@
 <div class="row">
     <div class="form-group col-sm-1">
         {!! Form::label('inicio', 'Início:') !!}
-        {!! Form::text('inicio', null, ['class' => 'form-control tempo', 'style' => 'padding:5px;']) !!}
+        {!! Form::text('inicio', null, ['class' => 'form-control tempo', 'placeholder' => '00:00:00', 'style' => 'padding:5px;']) !!}
     </div>
 </div>
 
@@ -10,7 +10,7 @@
 <div class="row">
     <div class="form-group col-sm-1">
         {!! Form::label('fim', 'Fim:') !!}
-        {!! Form::text('fim', null, ['class' => 'form-control tempo', 'style' => 'padding:5px;']) !!}
+        {!! Form::text('fim', null, ['class' => 'form-control tempo', 'placeholder' => '00:00:00', 'style' => 'padding:5px;']) !!}
     </div>
 </div>
 
@@ -18,7 +18,16 @@
 <div class="row">
     <div class="form-group col-sm-2">
         {!! Form::label('criterio', 'Critério/Loop:') !!}
-        {!! Form::text('criterio', null, ['class' => 'form-control']) !!}
+        <i class="fa fa-question-circle-o"
+           aria-hidden="true"
+           tabindex="0"
+           data-toggle="popover"
+           data-trigger="focus"
+           title=""
+           data-original-title="Critério/Loop"
+           data-content="O único detalhe que diferencía as regras extras são os critérios de movimentação ou o loop temporal em segundos. Assim sendo, se você definir Esquerda, Direita ou Ambos essa regra será de Movimentação. Já se você definir somente um valor numeral será uma R.E. de Tempo. Ok?">
+        </i>
+        {!! Form::text('criterio', null, ['class' => 'form-control criterio', 'placeholder' => 'Segundo ou lado']) !!}
     </div>
 </div>
 
@@ -41,4 +50,4 @@
     </div>
 </div>
 
-{{--@include('vendor.mask.mask')--}}
+@include('layouts.mask.mask')
