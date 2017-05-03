@@ -16,7 +16,7 @@ class CreateRegraExtrasMensagemsTable extends Migration
         Schema::create('regra_extras_mensagems', function (Blueprint $table) {
             $table->increments('id');
             $table->unsignedInteger('regra_extra_id');
-            $table->foreign('regra_extra_id')->references('id')->on('regra_extras');
+            $table->foreign('regra_extra_id')->references('id')->on('regra_extras')->onDelete('cascade');
             $table->unsignedInteger('mensagem_id');
             $table->foreign('mensagem_id')->references('id')->on('mensagems');
             $table->string('ordem');
