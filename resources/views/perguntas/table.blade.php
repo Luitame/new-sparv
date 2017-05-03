@@ -5,7 +5,7 @@
         <th colspan="3">Ação</th>
     </thead>
     <tbody>
-    @foreach($perguntas as $pergunta)
+    @forelse($perguntas as $pergunta)
         <tr>
             <td>{!! $pergunta->id !!}</td>
             <td width="85%">{!! $pergunta->perguntaTxt !!}</td>
@@ -19,6 +19,10 @@
                 {!! Form::close() !!}
             </td>
         </tr>
-    @endforeach
+    @empty
+        <tr>
+            <td colspan="5" class="text-center bg-warning text-warning">Nenhuma <b>Pergunta</b> cadastrada.</td>
+        </tr>
+    @endforelse
     </tbody>
 </table>
