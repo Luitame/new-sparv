@@ -25,7 +25,7 @@
         </tr>
     @empty
         <tr>
-            <td colspan="6" class="text-center bg-warning text-warning">Nenhum <b>Visor de Pontos</b> cadastrado.
+            <td colspan="6" class="text-center bg-warning text-warning">Nenhum <b>Visor de Pontuação</b> cadastrado.
             </td>
         </tr>
     @endforelse
