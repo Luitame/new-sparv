@@ -16,7 +16,7 @@ class CreateFasesPerguntasTable extends Migration
         Schema::create('fases_perguntas', function (Blueprint $table) {
             $table->increments('id');
             $table->unsignedInteger('fase_id');
-            $table->foreign('fase_id')->references('id')->on('fases');
+            $table->foreign('fase_id')->references('id')->on('fases')->onDelete('cascade');
             $table->unsignedInteger('pergunta_id');
             $table->foreign('pergunta_id')->references('id')->on('perguntas');
             $table->string('ordem');

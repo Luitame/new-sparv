@@ -56,7 +56,7 @@ class RegraExtraController extends AppBaseController
     {
         $input = $request->all();
 
-        $regraExtra = $this->regraExtraRepository->create($input);
+        $regraExtra = $this->regraExtraRepository->createWithRelationships($input);
 
         Flash::success('<b>Regra Extra</b> salvo com sucesso.');
 
