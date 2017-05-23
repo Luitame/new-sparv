@@ -1,5 +1,7 @@
 $(function () {
 
+  domainUrl = location.protocol + "//" + location.hostname;
+
   var $perguntaList = $('#pergunta-list');
   var $peguntaElement = $('#pergunta-element').html();
   var $perguntaNothingItemTemplate = $("#pergunta-nothing-item-element").html();
@@ -32,7 +34,7 @@ $(function () {
   $($perguntaList).on('keydown', '.perguntaTxt', function () {
     $(this).autocomplete({
       source: function (request, response) {
-        $.getJSON("http://sparv.app/api/perguntas/?search=" + request.term, function (data) {
+        $.getJSON(domainUrl + "/api/perguntas/?search=" + request.term, function (data) {
           response($.map(data.data, function (value, key) {
             return {
               label: value.perguntaTxt,
@@ -51,7 +53,7 @@ $(function () {
   });
 
   $('#datatable-pergunta-list').DataTable({
-    "ajax": "http://sparv.app/api/perguntas",
+    "ajax": domainUrl + "/api/perguntas",
     "columns": [
       {"data": "id"},
       {"data": "perguntaTxt"}
