@@ -1,7 +1,9 @@
 $(function () {
 
+  domainUrl = location.protocol + "//" + location.hostname;
+
   function onGetCard(number) {
-    $.getJSON("http://sparv.app/api/cartas/" + number, function (data) {
+    $.getJSON(domainUrl + "/api/cartas/" + number, function (data) {
       var card = data.data.nome;
       if ($(".card-thumb").length > 0) {
         $('.card-thumb').fadeOut('slow', function () {
@@ -9,7 +11,7 @@ $(function () {
         });
       }
       setTimeout(function () {
-        $(".card_image").append("<img src='http://sparv.app/images/cartas/" + card + ".png' class='card-thumb' style='max-height: 200px; border: 1px solid #3C8DBC;'/>");
+        $(".card_image").append("<img src='" + domainUrl + "/images/cartas/" + card + ".png' class='card-thumb' style='max-height: 200px; border: 1px solid #3C8DBC;'/>");
       }, 500);
       $("#carta_id").val(number.toString());
     });
