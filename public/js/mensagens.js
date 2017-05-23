@@ -1,5 +1,7 @@
 $(function () {
 
+  domainUrl = location.protocol + "//" + location.hostname;
+
   var $messageList = $('#message-list');
   var $mensagemElement = $('#message-element').html();
   var $messageNothingItemTemplate = $("#message-nothing-item-element").html();
@@ -32,7 +34,7 @@ $(function () {
   $($messageList).on('keydown', '.mensagemTxt', function () {
     $(this).autocomplete({
       source: function (request, response) {
-        $.getJSON("http://sparv.app/api/mensagems/?search=" + request.term, function (data) {
+        $.getJSON(domainUrl + "/api/mensagems/?search=" + request.term, function (data) {
           response($.map(data.data, function (value, key) {
             return {
               label: value.mensagemTxt,
@@ -51,7 +53,7 @@ $(function () {
   });
 
   $('#datatable-message-list').DataTable({
-    "ajax": "http://sparv.app/api/mensagems",
+    "ajax": domainUrl + "/api/mensagems",
     "columns": [
       {"data": "id"},
       {"data": "mensagemTxt"}
